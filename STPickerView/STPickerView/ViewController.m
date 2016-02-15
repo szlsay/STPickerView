@@ -9,11 +9,8 @@
 #import "ViewController.h"
 
 #import "STPickerArea.h"
-@interface ViewController ()<UITextFieldDelegate>
-
-
+@interface ViewController ()<UITextFieldDelegate, STPickerAreaDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textArea;
-
 @end
 
 @implementation ViewController
@@ -22,7 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
     self.textArea.delegate = self;
     
@@ -34,8 +30,16 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [self.textArea resignFirstResponder];
+
     STPickerArea  *pickerArea = [[STPickerArea alloc]init];
+    [pickerArea setDelegate:self];
     [pickerArea show];
+}
+
+- (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area
+{
+    NSString *text = [NSString stringWithFormat:@"%@ %@ %@", province, city, area];
+    self.textArea.text = text;
 }
 #pragma mark - --- event response 事件相应 ---
 
