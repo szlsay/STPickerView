@@ -35,17 +35,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择日期" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLR-pA-uhS">
+                                <rect key="frame" x="200" y="172" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pCf-ZC-AWp"/>
+                                    <constraint firstAttribute="width" constant="200" id="wW0-zf-f9D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fKo-yc-qPZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Flg-NF-P0B"/>
                             <constraint firstItem="xhB-xW-cI1" firstAttribute="leading" secondItem="fKo-yc-qPZ" secondAttribute="leading" id="TT0-CP-Rfj"/>
                             <constraint firstItem="fKo-yc-qPZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="VsG-LT-E0b"/>
+                            <constraint firstItem="NLR-pA-uhS" firstAttribute="top" secondItem="xhB-xW-cI1" secondAttribute="bottom" constant="8" id="WMt-gA-eMW"/>
                             <constraint firstItem="xhB-xW-cI1" firstAttribute="top" secondItem="fKo-yc-qPZ" secondAttribute="bottom" constant="8" id="Zax-4C-S51"/>
+                            <constraint firstItem="NLR-pA-uhS" firstAttribute="leading" secondItem="xhB-xW-cI1" secondAttribute="leading" id="bgc-I4-F4y"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textArea" destination="fKo-yc-qPZ" id="HnB-HU-neS"/>
+                        <outlet property="textDate" destination="NLR-pA-uhS" id="k5p-3w-usT"/>
                         <outlet property="textSingle" destination="xhB-xW-cI1" id="Rke-OW-CoN"/>
                     </connections>
                 </viewController>

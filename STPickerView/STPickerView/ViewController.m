@@ -10,10 +10,12 @@
 
 #import "STPickerArea.h"
 #import "STPickerSingle.h"
+#import "STPickerDate.h"
 
-@interface ViewController ()<UITextFieldDelegate, STPickerAreaDelegate, STPickerSingleDelegate>
+@interface ViewController ()<UITextFieldDelegate, STPickerAreaDelegate, STPickerSingleDelegate, STPickerDateDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textArea;
 @property (weak, nonatomic) IBOutlet UITextField *textSingle;
+@property (weak, nonatomic) IBOutlet UITextField *textDate;
 @end
 
 @implementation ViewController
@@ -25,6 +27,7 @@
 
     self.textArea.delegate = self;
     self.textSingle.delegate = self;
+    self.textDate.delegate = self;
     
 }
 
@@ -55,6 +58,14 @@
         [single show];
     }
     
+    
+    if (textField == self.textDate) {
+        [self.textDate resignFirstResponder];
+        
+        STPickerDate *datePicker = [[STPickerDate alloc]initWithDelegate:self];
+        [datePicker show];
+    }
+    
 }
 
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area
@@ -67,6 +78,12 @@
 {
     NSString *text = [NSString stringWithFormat:@"%@ 人民币", selectedTitle];
     self.textSingle.text = text;
+}
+
+- (void)pickerDate:(STPickerDate *)pickerDate year:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
+{
+    NSString *text = [NSString stringWithFormat:@"%d年%d月%d日", year, month, day];
+    self.textDate.text = text;
 }
 #pragma mark - --- event response 事件相应 ---
 

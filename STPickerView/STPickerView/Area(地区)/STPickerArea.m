@@ -9,7 +9,8 @@
 #import "STPickerArea.h"
 #import "STConfig.h"
 
-static CGFloat const PickerViewHeight = 244;
+static CGFloat const PickerViewHeight = 240;
+static CGFloat const PickerViewLabelWeight = 32;
 
 @interface STPickerArea()<UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -114,7 +115,7 @@ static CGFloat const PickerViewHeight = 244;
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return STControlSystemHeight;
+    return PickerViewLabelWeight;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component

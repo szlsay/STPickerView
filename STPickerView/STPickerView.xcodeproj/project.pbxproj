@@ -12,6 +12,8 @@
 		777A08B41C72BC300039A455 /* STUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B01C72BC300039A455 /* STUI.m */; };
 		777A08B51C72BC300039A455 /* UIView+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B21C72BC300039A455 /* UIView+ST.m */; };
 		777A08BA1C72C9C60039A455 /* STPickerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B91C72C9C60039A455 /* STPickerSingle.m */; };
+		777A08BE1C72F0590039A455 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08BD1C72F0590039A455 /* STPickerDate.m */; };
+		777A08C11C72F7680039A455 /* NSCalendar+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08C01C72F7680039A455 /* NSCalendar+ST.m */; };
 		777FD6B71C71B0C700F2471B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 777FD6B61C71B0C700F2471B /* main.m */; };
 		777FD6BA1C71B0C700F2471B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777FD6B91C71B0C700F2471B /* AppDelegate.m */; };
 		777FD6BD1C71B0C700F2471B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777FD6BC1C71B0C700F2471B /* ViewController.m */; };
@@ -34,6 +36,10 @@
 		777A08B61C72BC470039A455 /* STConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STConfig.h; sourceTree = "<group>"; };
 		777A08B81C72C9C60039A455 /* STPickerSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerSingle.h; sourceTree = "<group>"; };
 		777A08B91C72C9C60039A455 /* STPickerSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerSingle.m; sourceTree = "<group>"; };
+		777A08BC1C72F0590039A455 /* STPickerDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerDate.h; sourceTree = "<group>"; };
+		777A08BD1C72F0590039A455 /* STPickerDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerDate.m; sourceTree = "<group>"; };
+		777A08BF1C72F7680039A455 /* NSCalendar+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+ST.h"; sourceTree = "<group>"; };
+		777A08C01C72F7680039A455 /* NSCalendar+ST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+ST.m"; sourceTree = "<group>"; };
 		777FD6B21C71B0C700F2471B /* STPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777FD6B61C71B0C700F2471B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		777FD6B81C71B0C700F2471B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +91,17 @@
 			path = "Single(单数组)";
 			sourceTree = "<group>";
 		};
+		777A08BB1C72F02E0039A455 /* Date(日期) */ = {
+			isa = PBXGroup;
+			children = (
+				777A08BC1C72F0590039A455 /* STPickerDate.h */,
+				777A08BD1C72F0590039A455 /* STPickerDate.m */,
+				777A08BF1C72F7680039A455 /* NSCalendar+ST.h */,
+				777A08C01C72F7680039A455 /* NSCalendar+ST.m */,
+			);
+			path = "Date(日期)";
+			sourceTree = "<group>";
+		};
 		777FD6A91C71B0C700F2471B = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				777A08AC1C72BC300039A455 /* STConfig */,
+				777A08BB1C72F02E0039A455 /* Date(日期) */,
 				777A08B71C72C9960039A455 /* Single(单数组) */,
 				777FD6CD1C71B13A00F2471B /* Area(地区) */,
 				777FD6B81C71B0C700F2471B /* AppDelegate.h */,
@@ -218,6 +236,8 @@
 				777A08BA1C72C9C60039A455 /* STPickerSingle.m in Sources */,
 				777FD6BA1C71B0C700F2471B /* AppDelegate.m in Sources */,
 				777FD6B71C71B0C700F2471B /* main.m in Sources */,
+				777A08BE1C72F0590039A455 /* STPickerDate.m in Sources */,
+				777A08C11C72F7680039A455 /* NSCalendar+ST.m in Sources */,
 				777FD6D21C71B1AE00F2471B /* STPickerArea.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
