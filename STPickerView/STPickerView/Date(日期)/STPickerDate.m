@@ -41,7 +41,7 @@ static NSInteger const yearSum = 200;
 - (instancetype)initWithDelegate:(nullable id /*<STPickerDateDelegate>*/)delegate
 {
     self = [self init];
-    self.delegate = delegate;
+    _delegate = delegate;
     return self;
 }
 
@@ -59,7 +59,8 @@ static NSInteger const yearSum = 200;
 {
     self.bounds = [UIScreen mainScreen].bounds;
     self.backgroundColor = RGBA(0, 0, 0, 102.0/255);
-    [self.layer setOpaque:0.0];
+    self.layer.opacity = 0.0;
+    
     [self addSubview:self.pickerView];
     [self.pickerView addSubview:self.lineView];
     [self addSubview:self.toolbar];
@@ -71,6 +72,7 @@ static NSInteger const yearSum = 200;
     _year  = [NSCalendar currentYear];
     _month = [NSCalendar currentMonth];
     _day   = [NSCalendar currentDay];
+    
     [self.pickerView selectRow:(_year - yearMin) inComponent:0 animated:NO];
     [self.pickerView selectRow:(_month - 1) inComponent:1 animated:NO];
     [self.pickerView selectRow:(_day - 1) inComponent:2 animated:NO];

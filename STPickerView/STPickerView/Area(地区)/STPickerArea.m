@@ -48,7 +48,7 @@ static CGFloat const PickerViewLabelWeight = 32;
 - (instancetype)initWithDelegate:(nullable id /*<STPickerAreaDelegate>*/)delegate
 {
     self = [self init];
-    self.delegate = delegate;
+    _delegate = delegate;
     return self;
 }
 
@@ -66,7 +66,8 @@ static CGFloat const PickerViewLabelWeight = 32;
 {
     self.bounds = [UIScreen mainScreen].bounds;
     self.backgroundColor = RGBA(0, 0, 0, 102.0/255);
-    [self.layer setOpaque:0.0];
+    self.layer.opacity = 0.0;
+    
     [self addSubview:self.pickerView];
     [self.pickerView addSubview:self.lineView];
     [self addSubview:self.toolbar];

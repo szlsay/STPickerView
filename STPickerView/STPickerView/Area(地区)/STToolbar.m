@@ -52,13 +52,14 @@
 
 - (void)setupUI
 {
-    _title = nil;
-    _font = [UIFont systemFontOfSize:15];
-    _titleColor = [UIColor blackColor];
+    _title             = nil;
+    _font              = [UIFont systemFontOfSize:15];
+    _titleColor        = [UIColor blackColor];
     _borderButtonColor = RGB(205, 205, 205);
     
     self.bounds = CGRectMake(0, 0, ScreenWidth, STControlSystemHeight);
-    [self setBackgroundColor:[UIColor whiteColor]];
+    self.backgroundColor = [UIColor whiteColor];
+    
     [self addSubview:self.labelTitle];
     [self addSubview:self.buttonLeft];
     [self addSubview:self.buttonRight];

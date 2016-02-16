@@ -33,11 +33,11 @@ static CGFloat const PickerViewLabelWeight = 32;
                         titleUnit:(NSString *)titleUnit
                          delegate:(nullable id)delegate
 {
-    self.arrayData = arrayData.mutableCopy;
-    self.titleUnit = titleUnit;
-    
     self = [self init];
-    self.delegate = delegate;
+    _arrayData = arrayData.mutableCopy;
+    _titleUnit = titleUnit;
+    _delegate = delegate;
+    
     return self;
 }
 
@@ -52,9 +52,14 @@ static CGFloat const PickerViewLabelWeight = 32;
 
 - (void)setupUI
 {
+    _titleUnit = @"";
+    _title = @"";
+    _arrayData = @[].mutableCopy;
+    
     self.bounds = [UIScreen mainScreen].bounds;
     self.backgroundColor = RGBA(0, 0, 0, 102.0/255);
-    [self.layer setOpaque:0.0];
+    self.layer.opacity = 0.0;
+    
     [self addSubview:self.pickerView];
     [self.pickerView addSubview:self.lineView];
     [self addSubview:self.toolbar];
