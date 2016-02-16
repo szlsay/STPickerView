@@ -53,7 +53,7 @@
 - (void)setupUI
 {
     _title = nil;
-    _font = [UIFont systemFontOfSize:17];
+    _font = [UIFont systemFontOfSize:15];
     _titleColor = [UIColor blackColor];
     _borderButtonColor = RGB(205, 205, 205);
     
@@ -135,7 +135,7 @@
 - (UILabel *)labelTitle
 {
     if (!_labelTitle) {
-        CGFloat titleX = 100;
+        CGFloat titleX = self.buttonLeft.right + STMarginSmall;
         CGFloat titleY = 0;
         CGFloat titleW = ScreenWidth - titleX * 2;
         CGFloat titleH = STControlSystemHeight;
@@ -143,6 +143,7 @@
         [_labelTitle setTextAlignment:NSTextAlignmentCenter];
         [_labelTitle setTextColor:self.titleColor];
         [_labelTitle setFont:self.font];
+        _labelTitle.adjustsFontSizeToFitWidth = YES;
     }
     return _labelTitle;
 }

@@ -149,16 +149,17 @@ static CGFloat const PickerViewHeight = 244;
     }else{
     }
 
-    NSInteger index0 = [pickerView selectedRowInComponent:0];
-    NSInteger index1 = [pickerView selectedRowInComponent:1];
-    NSInteger index2 = [pickerView selectedRowInComponent:2];
-    self.province = self.arrayProvince[index0];
-    self.city = self.arrayCity[index1];
-    if (self.arrayArea.count != 0) {
-        self.area = self.arrayArea[index2];
-    }else{
-        self.area = @"";
-    }
+    [self reloadData];
+//    NSInteger index0 = [pickerView selectedRowInComponent:0];
+//    NSInteger index1 = [pickerView selectedRowInComponent:1];
+//    NSInteger index2 = [pickerView selectedRowInComponent:2];
+//    self.province = self.arrayProvince[index0];
+//    self.city = self.arrayCity[index1];
+//    if (self.arrayArea.count != 0) {
+//        self.area = self.arrayArea[index2];
+//    }else{
+//        self.area = @"";
+//    }
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view
@@ -200,6 +201,24 @@ static CGFloat const PickerViewHeight = 244;
 }
 
 #pragma mark - --- private methods 私有方法 ---
+
+- (void)reloadData
+{
+    NSInteger index0 = [self.pickerView selectedRowInComponent:0];
+    NSInteger index1 = [self.pickerView selectedRowInComponent:1];
+    NSInteger index2 = [self.pickerView selectedRowInComponent:2];
+    self.province = self.arrayProvince[index0];
+    self.city = self.arrayCity[index1];
+    if (self.arrayArea.count != 0) {
+        self.area = self.arrayArea[index2];
+    }else{
+        self.area = @"";
+    }
+    
+    NSString *title = [NSString stringWithFormat:@"%@ %@ %@", self.province, self.city, self.area];
+    [self.toolbar setTitle:title];
+
+}
 
 - (void)show
 {
