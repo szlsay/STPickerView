@@ -2,7 +2,7 @@
 //  STToolbar.m
 //  STPickerView
 //
-//  Created by rkxt_ios on 16/2/16.
+//  Created by https://github.com/STShenZhaoliang/STPickerView on 16/2/16.
 //  Copyright © 2016年 shentian. All rights reserved.
 //
 
