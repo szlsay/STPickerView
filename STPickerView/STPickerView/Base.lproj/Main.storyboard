@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKo-yc-qPZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKo-yc-qPZ">
                                 <rect key="frame" x="200" y="96" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GwP-4j-ZJb"/>
@@ -26,20 +26,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择人民币" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhB-xW-cI1">
+                                <rect key="frame" x="200" y="134" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KGO-o0-tXr"/>
+                                    <constraint firstAttribute="height" constant="30" id="Smr-yM-TAP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fKo-yc-qPZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Flg-NF-P0B"/>
+                            <constraint firstItem="xhB-xW-cI1" firstAttribute="leading" secondItem="fKo-yc-qPZ" secondAttribute="leading" id="TT0-CP-Rfj"/>
                             <constraint firstItem="fKo-yc-qPZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="VsG-LT-E0b"/>
+                            <constraint firstItem="xhB-xW-cI1" firstAttribute="top" secondItem="fKo-yc-qPZ" secondAttribute="bottom" constant="8" id="Zax-4C-S51"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textArea" destination="fKo-yc-qPZ" id="HnB-HU-neS"/>
+                        <outlet property="textSingle" destination="xhB-xW-cI1" id="Rke-OW-CoN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="208"/>
+            <point key="canvasLocation" x="-24" y="111"/>
         </scene>
     </scenes>
 </document>

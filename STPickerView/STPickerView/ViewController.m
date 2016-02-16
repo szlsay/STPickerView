@@ -9,8 +9,11 @@
 #import "ViewController.h"
 
 #import "STPickerArea.h"
-@interface ViewController ()<UITextFieldDelegate, STPickerAreaDelegate>
+#import "STPickerSingle.h"
+
+@interface ViewController ()<UITextFieldDelegate, STPickerAreaDelegate, STPickerSingleDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textArea;
+@property (weak, nonatomic) IBOutlet UITextField *textSingle;
 @end
 
 @implementation ViewController
@@ -21,6 +24,7 @@
     [super viewDidLoad];
 
     self.textArea.delegate = self;
+    self.textSingle.delegate = self;
     
 }
 
@@ -29,15 +33,40 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    [self.textArea resignFirstResponder];
+    if (textField == self.textArea) {
+        [self.textArea resignFirstResponder];
+        [[[STPickerArea alloc]initWithDelegate:self]show];
+    }
     
-    [[[STPickerArea alloc]initWithDelegate:self]show];
+    if (textField == self.textSingle) {
+        [self.textSingle resignFirstResponder];
+        
+        NSMutableArray *arrayData = [NSMutableArray array];
+        for (int i = 1; i < 1000; i++) {
+            NSString *string = [NSString stringWithFormat:@"%d", i];
+            [arrayData addObject:string];
+        }
+        
+        STPickerSingle *single = [[STPickerSingle alloc]init];
+        [single setArrayData:arrayData];
+        [single setTitle:@"请选择价格"];
+        [single setTitleUnit:@"人民币"];
+        [single setDelegate:self];
+        [single show];
+    }
+    
 }
 
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area
 {
     NSString *text = [NSString stringWithFormat:@"%@ %@ %@", province, city, area];
     self.textArea.text = text;
+}
+
+- (void)pickerSingle:(STPickerSingle *)pickerSingle selectedTitle:(NSString *)selectedTitle
+{
+    NSString *text = [NSString stringWithFormat:@"%@ 人民币", selectedTitle];
+    self.textSingle.text = text;
 }
 #pragma mark - --- event response 事件相应 ---
 

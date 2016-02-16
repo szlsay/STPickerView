@@ -11,9 +11,9 @@
 
 @interface STToolbar()
 
-@property (nonatomic, strong, nullable)UIButton *buttonLeft; //
-@property (nonatomic, strong, nullable)UILabel *labelTitle; //
-@property (nonatomic, strong, nullable)UIButton *buttonRight; //
+@property (nonatomic, strong, nullable)UIButton *buttonLeft;
+@property (nonatomic, strong, nullable)UILabel *labelTitle;
+@property (nonatomic, strong, nullable)UIButton *buttonRight; 
 @end
 @implementation STToolbar
 
