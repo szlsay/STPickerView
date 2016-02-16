@@ -7,28 +7,51 @@
 //
 
 #import "STPickerArea.h"
+#import "STToolbar.h"
 
-#import "STConst.h"
+#import "STConfig.h"
+
+static CGFloat const PickerViewHeight = 244;
 
 @interface STPickerArea()<UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic, strong, nullable)NSArray *arrayRoot; //
-@property (nonatomic, strong, nullable)NSMutableArray *arrayProvince; //
-@property (nonatomic, strong, nullable)NSMutableArray *arrayCity; //
-@property (nonatomic, strong, nullable)NSMutableArray *arrayArea; //
-@property (nonatomic, strong, nullable)NSMutableArray *arraySelected; //
-@property (nonatomic, strong, nullable)UIPickerView *pickerView; //
-@property (nonatomic, strong, nullable)UIToolbar *toolbar; //
+/** 1.数据源数组 */
+@property (nonatomic, strong, nullable)NSArray *arrayRoot;
+/** 2.当前省数组 */
+@property (nonatomic, strong, nullable)NSMutableArray *arrayProvince;
+/** 3.当前城市数组 */
+@property (nonatomic, strong, nullable)NSMutableArray *arrayCity;
+/** 4.当前地区数组 */
+@property (nonatomic, strong, nullable)NSMutableArray *arrayArea;
+/** 5.当前选中数组 */
+@property (nonatomic, strong, nullable)NSMutableArray *arraySelected;
 
-@property (nonatomic, strong, nullable)NSString *province; // 省份
-@property (nonatomic, strong, nullable)NSString *city;  // 城市
-@property (nonatomic, strong, nullable)NSString *area;  // 地区
+/** 6.选择器 */
+@property (nonatomic, strong, nullable)UIPickerView *pickerView;
+/** 7.工具器 */
+@property (nonatomic, strong, nullable)STToolbar *toolbar;
+/** 8.边线 */
+@property (nonatomic, strong, nullable)UIView *lineView;
+
+/** 9.省份 */
+@property (nonatomic, strong, nullable)NSString *province;
+/** 10.城市 */
+@property (nonatomic, strong, nullable)NSString *city;
+/** 11.地区 */
+@property (nonatomic, strong, nullable)NSString *area;
 
 @end
 
 @implementation STPickerArea
 
 #pragma mark - --- init 视图初始化 ---
+
+- (instancetype)initWithDelegate:(nullable id /*<STPickerAreaDelegate>*/)delegate
+{
+    self = [self init];
+    self.delegate = delegate;
+    return self;
+}
 
 - (instancetype)init
 {
@@ -46,6 +69,7 @@
     self.backgroundColor = RGBA(0, 0, 0, 102.0/255);
     [self.layer setOpaque:0.0];
     [self addSubview:self.pickerView];
+    [self.pickerView addSubview:self.lineView];
     [self addSubview:self.toolbar];
     [self addTarget:self action:@selector(remove) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -92,7 +116,7 @@
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return 44;
+    return STControlSystemHeight;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -184,11 +208,11 @@
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:self];
 
     CGRect frameTool = self.toolbar.frame;
-    frameTool.origin.y -= 244;
+    frameTool.origin.y -= PickerViewHeight;
 
     CGRect framePicker =  self.pickerView.frame;
-    framePicker.origin.y -= 244;
-    [UIView animateWithDuration:0.5 animations:^{
+    framePicker.origin.y -= PickerViewHeight;
+    [UIView animateWithDuration:0.33 animations:^{
         [self.layer setOpacity:1];
         self.toolbar.frame = frameTool;
         self.pickerView.frame = framePicker;
@@ -199,11 +223,11 @@
 - (void)remove
 {
     CGRect frameTool = self.toolbar.frame;
-    frameTool.origin.y += 244;
+    frameTool.origin.y += PickerViewHeight;
 
     CGRect framePicker =  self.pickerView.frame;
-    framePicker.origin.y += 244;
-    [UIView animateWithDuration:0.5 animations:^{
+    framePicker.origin.y += PickerViewHeight;
+    [UIView animateWithDuration:0.33 animations:^{
         [self.layer setOpacity:0];
         self.toolbar.frame = frameTool;
         self.pickerView.frame = framePicker;
@@ -261,9 +285,9 @@
 {
     if (!_pickerView) {
         CGFloat pickerW = ScreenWidth;
-        CGFloat pickerH = 200;
+        CGFloat pickerH = PickerViewHeight - STControlSystemHeight;
         CGFloat pickerX = 0;
-        CGFloat pickerY = ScreenHeight+44;
+        CGFloat pickerY = ScreenHeight+STControlSystemHeight;
         _pickerView = [[UIPickerView alloc]initWithFrame:CGRectMake(pickerX, pickerY, pickerW, pickerH)];
         [_pickerView setBackgroundColor:[UIColor whiteColor]];
         [_pickerView setDataSource:self];
@@ -272,42 +296,28 @@
     return _pickerView;
 }
 
-- (UIToolbar *)toolbar{
+- (STToolbar *)toolbar
+{
     if (!_toolbar) {
-        CGFloat toolW = ScreenWidth;
-        CGFloat toolH = 44;
-        CGFloat toolX = 0;
-        CGFloat toolY = ScreenHeight;
-        _toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(toolX, toolY, toolW, toolH)];
-        [_toolbar setTranslucent:NO];
-        [_toolbar setBarTintColor:[UIColor whiteColor]];
-
-
-        UIButton *leftButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
-        [leftButton setTitle:@"取消" forState:UIControlStateNormal];
-        [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [leftButton.titleLabel setFont:[UIFont systemFontOfSize:17]];
-        [leftButton addTarget:self action:@selector(selectedCancel) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];
-
-
-        UIBarButtonItem *middleItem = [[UIBarButtonItem alloc]initWithTitle:@"选择地区" style:UIBarButtonItemStylePlain target:nil action:nil];
-        [middleItem setWidth:ScreenWidth - (44 + 16) * 2];
-
-        UIButton *rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
-        [rightButton setTitle:@"确定" forState:UIControlStateNormal];
-        [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [rightButton.titleLabel setFont:[UIFont systemFontOfSize:17]];
-        [rightButton addTarget:self action:@selector(selectedOk) forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
-
-        [_toolbar setItems:@[[UIBarButtonItem new],leftItem, middleItem,rightItem] animated:NO];
-
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 43.5, ScreenWidth, 0.5)];
-        [view setBackgroundColor:[UIColor grayColor]];
-        [_toolbar addSubview:view];
+        _toolbar = [[STToolbar alloc]initWithTitle:@"选择城市地区"
+                                 cancelButtonTitle:@"取消"
+                                     okButtonTitle:@"确定"
+                                         addTarget:self
+                                      cancelAction:@selector(selectedCancel)
+                                          okAction:@selector(selectedOk)];
+        _toolbar.x = 0;
+        _toolbar.y = ScreenHeight;
     }
     return _toolbar;
+}
+
+- (UIView *)lineView
+{
+    if (!_lineView) {
+        _lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.5)];
+        [_lineView setBackgroundColor:RGB(205, 205, 205)];
+    }
+    return _lineView;
 }
 
 @end

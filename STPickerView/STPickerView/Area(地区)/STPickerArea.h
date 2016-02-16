@@ -15,7 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 @interface STPickerArea : UIButton
+
 @property(nonatomic, weak)id <STPickerAreaDelegate>delegate ;
+
+- (instancetype)initWithDelegate:(nullable id /*<STPickerAreaDelegate>*/)delegate;
+
 - (void)show;
 @end
 NS_ASSUME_NONNULL_END

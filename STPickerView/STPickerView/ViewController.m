@@ -30,10 +30,8 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [self.textArea resignFirstResponder];
-
-    STPickerArea  *pickerArea = [[STPickerArea alloc]init];
-    [pickerArea setDelegate:self];
-    [pickerArea show];
+    
+    [[[STPickerArea alloc]initWithDelegate:self]show];
 }
 
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area
