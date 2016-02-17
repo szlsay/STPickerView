@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 @interface STPickerArea : STPickerView
+/** 1.中间选择框的高度，default is 32*/
+@property (nonatomic, assign)CGFloat heightPickerComponent;
+
 @property(nonatomic, weak)id <STPickerAreaDelegate>delegate ;
 @end
 NS_ASSUME_NONNULL_END

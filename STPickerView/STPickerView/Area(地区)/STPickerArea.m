@@ -8,8 +8,6 @@
 
 #import "STPickerArea.h"
 
-static CGFloat const PickerViewLabelWeight = 32;
-
 @interface STPickerArea()<UIPickerViewDataSource, UIPickerViewDelegate>
 
 /** 1.数据源数组 */
@@ -59,6 +57,7 @@ static CGFloat const PickerViewLabelWeight = 32;
     }
     
     // 2.设置视图的默认属性
+    _heightPickerComponent = 32;
     [self setTitle:@"请选择城市地区"];
     [self.pickerView setDelegate:self];
     [self.pickerView setDataSource:self];
@@ -84,7 +83,7 @@ static CGFloat const PickerViewLabelWeight = 32;
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return PickerViewLabelWeight;
+    return self.heightPickerComponent;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component

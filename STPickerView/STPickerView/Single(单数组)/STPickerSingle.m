@@ -7,7 +7,6 @@
 //
 
 #import "STPickerSingle.h"
-static CGFloat const PickerViewLabelWeight = 32;
 
 @interface STPickerSingle()<UIPickerViewDataSource, UIPickerViewDelegate>
 /** 1.选中的字符串 */
@@ -24,6 +23,8 @@ static CGFloat const PickerViewLabelWeight = 32;
 
     _titleUnit = @"";
     _arrayData = @[].mutableCopy;
+    _heightPickerComponent = 44;
+    _widthPickerComponent = 32;
 
     [self.pickerView setDelegate:self];
     [self.pickerView setDataSource:self];
@@ -49,18 +50,18 @@ static CGFloat const PickerViewLabelWeight = 32;
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return STControlNormalHeight;
+    return self.heightPickerComponent;
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
     
     if (component == 0) {
-        return (ScreenWidth-PickerViewLabelWeight)/2;
+        return (self.width-self.widthPickerComponent)/2;
     }else if (component == 1){
-        return PickerViewLabelWeight;
+        return self.widthPickerComponent;
     }else {
-        return (ScreenWidth-PickerViewLabelWeight)/2;
+        return (self.width-self.widthPickerComponent)/2;
     }
 }
 

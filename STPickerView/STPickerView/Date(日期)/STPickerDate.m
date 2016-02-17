@@ -8,12 +8,7 @@
 
 #import "STPickerDate.h"
 #import "NSCalendar+ST.h"
-static CGFloat const PickerViewLabelWeight = 28;
-
-
-
 @interface STPickerDate()<UIPickerViewDataSource, UIPickerViewDelegate>
-
 /** 1.年 */
 @property (nonatomic, assign)NSInteger year;
 /** 2.月 */
@@ -33,6 +28,7 @@ static CGFloat const PickerViewLabelWeight = 28;
     
     _yearLeast = 1900;
     _yearSum   = 200;
+    _heightPickerComponent = 28;
     
     _year  = [NSCalendar currentYear];
     _month = [NSCalendar currentMonth];
@@ -68,7 +64,7 @@ static CGFloat const PickerViewLabelWeight = 28;
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return PickerViewLabelWeight;
+    return self.heightPickerComponent;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
