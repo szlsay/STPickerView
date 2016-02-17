@@ -13,15 +13,18 @@
 ####根据单数据的模式，可以扩展多数据的模式
 ![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/show1.gif)
 
-## 初始化方法
-### 一行搞定选择器
+### 中间的显示模式
+![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/show3.png)
+
+## 接口
+### 显示模式枚举
 ![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/p0.jpg)
-### 可以单个接口设置,可以定制,低耦合,便于扩展
+### 视图接口
 ![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/p1.jpg)
+### 方法接口
 ![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/p2.jpg)
 
-## 视图定制
-### ToolBar的定制
-![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/user0.jpg)
-### PickerView的定制
-![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/user1.jpg)
+## 使用举例
+### 大家可以根据自己的实际需求，封装初始化方法。<br>
+注意：如果重新编写setupUI方法，封装的方法，使用'self = [self init]'初始化，否则使用'self = [super init]'\<br>
+![image](https://github.com/STShenZhaoliang/STPickerView/blob/master/picture/u0.jpg)

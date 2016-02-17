@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, STPickerContentMode) {
 
 
 /**
- *  5.创建视图
+ *  5.创建视图,初始化视图时初始数据
  */
 - (void)setupUI;
 

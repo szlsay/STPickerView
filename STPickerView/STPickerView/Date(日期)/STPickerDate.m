@@ -36,6 +36,7 @@
     
     [self.pickerView setDelegate:self];
     [self.pickerView setDataSource:self];
+    
     [self.pickerView selectRow:(_year - _yearLeast) inComponent:0 animated:NO];
     [self.pickerView selectRow:(_month - 1) inComponent:1 animated:NO];
     [self.pickerView selectRow:(_day - 1) inComponent:2 animated:NO];
