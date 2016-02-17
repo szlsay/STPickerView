@@ -6,19 +6,21 @@
 //  Copyright © 2016年 shentian. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "STPickerView.h"
 NS_ASSUME_NONNULL_BEGIN
 @class STPickerDate;
 @protocol  STPickerDateDelegate<NSObject>
 - (void)pickerDate:(STPickerDate *)pickerDate year:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 
 @end
-@interface STPickerDate : UIButton
+@interface STPickerDate : STPickerView
+
+/** 1.最小的年份，default is 1900 */
+@property (nonatomic, assign)NSInteger yearLeast;
+/** 2.显示年份数量，default is 200 */
+@property (nonatomic, assign)NSInteger yearSum;
 
 @property(nonatomic, weak)id <STPickerDateDelegate>delegate ;
 
-- (instancetype)initWithDelegate:(nullable id /*<STPickerDateDelegate>*/)delegate;
-
-- (void)show;
 @end
 NS_ASSUME_NONNULL_END

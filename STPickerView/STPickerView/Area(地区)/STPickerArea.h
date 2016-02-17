@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STPickerView.h"
 NS_ASSUME_NONNULL_BEGIN
 @class STPickerArea;
 @protocol  STPickerAreaDelegate<NSObject>
@@ -14,12 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area;
 
 @end
-@interface STPickerArea : UIButton
-
+@interface STPickerArea : STPickerView
 @property(nonatomic, weak)id <STPickerAreaDelegate>delegate ;
-
-- (instancetype)initWithDelegate:(nullable id /*<STPickerAreaDelegate>*/)delegate;
-
-- (void)show;
 @end
 NS_ASSUME_NONNULL_END

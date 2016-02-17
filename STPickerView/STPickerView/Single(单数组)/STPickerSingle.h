@@ -11,7 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 @class STPickerSingle;
 @protocol  STPickerSingleDelegate<NSObject>
 - (void)pickerSingle:(STPickerSingle *)pickerSingle selectedTitle:(NSString *)selectedTitle;
-
 @end
 
 @interface STPickerSingle : STPickerView
@@ -21,12 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 2.设置单位标题 */
 @property (nonatomic, strong)NSString *titleUnit;
 
-
 @property(nonatomic, weak)id <STPickerSingleDelegate>delegate;
-
-- (instancetype)initWithArrayData:(NSArray<NSString *>*)arrayData
-                        titleUnit:(NSString *)titleUnit
-                         delegate:(nullable id)delegate;
 
 @end
 NS_ASSUME_NONNULL_END

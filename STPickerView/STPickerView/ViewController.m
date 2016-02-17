@@ -38,7 +38,12 @@
 {
     if (textField == self.textArea) {
         [self.textArea resignFirstResponder];
-        [[[STPickerArea alloc]initWithDelegate:self]show];
+        
+        
+        STPickerArea *pickerArea = [[STPickerArea alloc]init];
+        [pickerArea setDelegate:self];
+        [pickerArea show];
+        
     }
     
     if (textField == self.textSingle) {
@@ -50,20 +55,22 @@
             [arrayData addObject:string];
         }
         
-        STPickerSingle *single = [[STPickerSingle alloc]init];
-        [single setArrayData:arrayData];
-        [single setTitle:@"请选择价格"];
-        [single setTitleUnit:@"人民币"];
-        [single setDelegate:self];
-        [single show];
+        STPickerSingle *pickerSingle = [[STPickerSingle alloc]init];
+        [pickerSingle setArrayData:arrayData];
+        [pickerSingle setTitle:@"请选择价格"];
+        [pickerSingle setTitleUnit:@"人民币"];
+        [pickerSingle setContentMode:STPickerContentModeCenter];
+        [pickerSingle setDelegate:self];
+        [pickerSingle show];
     }
     
     
     if (textField == self.textDate) {
         [self.textDate resignFirstResponder];
         
-        STPickerDate *datePicker = [[STPickerDate alloc]initWithDelegate:self];
-        [datePicker show];
+        STPickerDate *pickerDate = [[STPickerDate alloc]init];
+        [pickerDate setDelegate:self];
+        [pickerDate show];
     }
     
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		670A02741C73DE6A00BF8110 /* STToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A02731C73DE6A00BF8110 /* STToolbar.m */; };
 		670A02771C73DEB100BF8110 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A02761C73DEB100BF8110 /* STPickerView.m */; };
 		777A08B31C72BC300039A455 /* STConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08AE1C72BC300039A455 /* STConst.m */; };
 		777A08B41C72BC300039A455 /* STUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B01C72BC300039A455 /* STUI.m */; };
@@ -26,8 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		670A02721C73DE6A00BF8110 /* STToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STToolbar.h; sourceTree = "<group>"; };
-		670A02731C73DE6A00BF8110 /* STToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STToolbar.m; sourceTree = "<group>"; };
 		670A02751C73DEB100BF8110 /* STPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerView.h; sourceTree = "<group>"; };
 		670A02761C73DEB100BF8110 /* STPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerView.m; sourceTree = "<group>"; };
 		777A08AD1C72BC300039A455 /* STConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConst.h; sourceTree = "<group>"; };
@@ -72,8 +69,6 @@
 		670A02711C73DE4B00BF8110 /* STPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				670A02721C73DE6A00BF8110 /* STToolbar.h */,
-				670A02731C73DE6A00BF8110 /* STToolbar.m */,
 				670A02751C73DEB100BF8110 /* STPickerView.h */,
 				670A02761C73DEB100BF8110 /* STPickerView.m */,
 			);
@@ -241,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				670A02741C73DE6A00BF8110 /* STToolbar.m in Sources */,
 				670A02771C73DEB100BF8110 /* STPickerView.m in Sources */,
 				777A08B31C72BC300039A455 /* STConst.m in Sources */,
 				777A08B51C72BC300039A455 /* UIView+ST.m in Sources */,

@@ -18,18 +18,6 @@ static CGFloat const PickerViewLabelWeight = 32;
 @implementation STPickerSingle
 
 #pragma mark - --- init 视图初始化 ---
-
-- (instancetype)initWithArrayData:(NSArray<NSString *>*)arrayData
-                        titleUnit:(NSString *)titleUnit
-                         delegate:(nullable id)delegate
-{
-    self = [super init];
-    _arrayData = arrayData.mutableCopy;
-    _titleUnit = titleUnit;
-    _delegate = delegate;
-    return self;
-}
-
 - (void)setupUI
 {
     [super setupUI];
@@ -79,7 +67,6 @@ static CGFloat const PickerViewLabelWeight = 32;
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     self.selectedTitle = self.arrayData[row];
-    [self.toolbar setTitle:[NSString stringWithFormat:@"%@ %@", self.selectedTitle, self.titleUnit]];
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view
