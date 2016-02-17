@@ -7,11 +7,10 @@
 //
 
 #import "STPickerSingle.h"
-//#import "STConfig.h"
 static CGFloat const PickerViewLabelWeight = 32;
 
 @interface STPickerSingle()<UIPickerViewDataSource, UIPickerViewDelegate>
-/** 4.选中的字符串 */
+/** 1.选中的字符串 */
 @property (nonatomic, strong, nullable)NSString *selectedTitle;
 
 @end
@@ -28,7 +27,6 @@ static CGFloat const PickerViewLabelWeight = 32;
     _arrayData = arrayData.mutableCopy;
     _titleUnit = titleUnit;
     _delegate = delegate;
-    
     return self;
 }
 
@@ -108,7 +106,6 @@ static CGFloat const PickerViewLabelWeight = 32;
     [self.delegate pickerSingle:self selectedTitle:self.selectedTitle];
     [super selectedOk];
 }
-
 
 #pragma mark - --- private methods 私有方法 ---
 

@@ -2,7 +2,7 @@
 //  STPickerView.m
 //  STPickerView
 //
-//  Created by 沈兆良 on 16/2/17.
+//  Created by https://github.com/STShenZhaoliang/STPickerView on 16/2/17.
 //  Copyright © 2016年 shentian. All rights reserved.
 //
 
@@ -69,7 +69,7 @@ static CGFloat const PickerViewHeight = 240;
 
     CGRect framePicker =  self.pickerView.frame;
     framePicker.origin.y -= PickerViewHeight;
-    [UIView animateWithDuration:0.33 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         [self.layer setOpacity:1];
         self.toolbar.frame = frameTool;
         self.pickerView.frame = framePicker;
@@ -84,7 +84,7 @@ static CGFloat const PickerViewHeight = 240;
 
     CGRect framePicker =  self.pickerView.frame;
     framePicker.origin.y += PickerViewHeight;
-    [UIView animateWithDuration:0.33 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         [self.layer setOpacity:0];
         self.toolbar.frame = frameTool;
         self.pickerView.frame = framePicker;
