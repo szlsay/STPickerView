@@ -121,10 +121,10 @@
 {
     NSMutableArray *arrayComponents = [NSMutableArray array];
     
-    NSString *stringOne = [NSString stringWithFormat:@"%d-%d-%d", componentsOne.year,
+    NSString *stringOne = [NSString stringWithFormat:@"%zd-%zd-%zd", componentsOne.year,
                            componentsOne.month,
                            componentsOne.day];
-    NSString *stringTwo = [NSString stringWithFormat:@"%d-%d-%d", componentsTwo.year,
+    NSString *stringTwo = [NSString stringWithFormat:@"%zd-%zd-%zd", componentsTwo.year,
                            componentsTwo.month,
                            componentsTwo.day];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];

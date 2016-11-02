@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		670A02771C73DEB100BF8110 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 670A02761C73DEB100BF8110 /* STPickerView.m */; };
-		777A08B31C72BC300039A455 /* STConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08AE1C72BC300039A455 /* STConst.m */; };
-		777A08B41C72BC300039A455 /* STUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B01C72BC300039A455 /* STUI.m */; };
-		777A08B51C72BC300039A455 /* UIView+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B21C72BC300039A455 /* UIView+ST.m */; };
+		70D325DE1DC973D60000BD39 /* UIView+STFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D325DD1DC973D60000BD39 /* UIView+STFrame.m */; };
+		777A08B31C72BC300039A455 /* STPickerViewConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08AE1C72BC300039A455 /* STPickerViewConst.m */; };
+		777A08B41C72BC300039A455 /* STPickerViewUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B01C72BC300039A455 /* STPickerViewUI.m */; };
 		777A08BA1C72C9C60039A455 /* STPickerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08B91C72C9C60039A455 /* STPickerSingle.m */; };
 		777A08BE1C72F0590039A455 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08BD1C72F0590039A455 /* STPickerDate.m */; };
 		777A08C11C72F7680039A455 /* NSCalendar+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A08C01C72F7680039A455 /* NSCalendar+ST.m */; };
@@ -27,13 +27,13 @@
 /* Begin PBXFileReference section */
 		670A02751C73DEB100BF8110 /* STPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerView.h; sourceTree = "<group>"; };
 		670A02761C73DEB100BF8110 /* STPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerView.m; sourceTree = "<group>"; };
-		777A08AD1C72BC300039A455 /* STConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConst.h; sourceTree = "<group>"; };
-		777A08AE1C72BC300039A455 /* STConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConst.m; sourceTree = "<group>"; };
-		777A08AF1C72BC300039A455 /* STUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUI.h; sourceTree = "<group>"; };
-		777A08B01C72BC300039A455 /* STUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUI.m; sourceTree = "<group>"; };
-		777A08B11C72BC300039A455 /* UIView+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ST.h"; sourceTree = "<group>"; };
-		777A08B21C72BC300039A455 /* UIView+ST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ST.m"; sourceTree = "<group>"; };
-		777A08B61C72BC470039A455 /* STConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STConfig.h; sourceTree = "<group>"; };
+		70D325DC1DC973D60000BD39 /* UIView+STFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STFrame.h"; sourceTree = "<group>"; };
+		70D325DD1DC973D60000BD39 /* UIView+STFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+STFrame.m"; sourceTree = "<group>"; };
+		777A08AD1C72BC300039A455 /* STPickerViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewConst.h; sourceTree = "<group>"; };
+		777A08AE1C72BC300039A455 /* STPickerViewConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerViewConst.m; sourceTree = "<group>"; };
+		777A08AF1C72BC300039A455 /* STPickerViewUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewUI.h; sourceTree = "<group>"; };
+		777A08B01C72BC300039A455 /* STPickerViewUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerViewUI.m; sourceTree = "<group>"; };
+		777A08B61C72BC470039A455 /* STPickerViewConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STPickerViewConfig.h; sourceTree = "<group>"; };
 		777A08B81C72C9C60039A455 /* STPickerSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerSingle.h; sourceTree = "<group>"; };
 		777A08B91C72C9C60039A455 /* STPickerSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerSingle.m; sourceTree = "<group>"; };
 		777A08BC1C72F0590039A455 /* STPickerDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerDate.h; sourceTree = "<group>"; };
@@ -78,13 +78,13 @@
 		777A08AC1C72BC300039A455 /* STConfig */ = {
 			isa = PBXGroup;
 			children = (
-				777A08B61C72BC470039A455 /* STConfig.h */,
-				777A08AD1C72BC300039A455 /* STConst.h */,
-				777A08AE1C72BC300039A455 /* STConst.m */,
-				777A08AF1C72BC300039A455 /* STUI.h */,
-				777A08B01C72BC300039A455 /* STUI.m */,
-				777A08B11C72BC300039A455 /* UIView+ST.h */,
-				777A08B21C72BC300039A455 /* UIView+ST.m */,
+				70D325DC1DC973D60000BD39 /* UIView+STFrame.h */,
+				70D325DD1DC973D60000BD39 /* UIView+STFrame.m */,
+				777A08B61C72BC470039A455 /* STPickerViewConfig.h */,
+				777A08AD1C72BC300039A455 /* STPickerViewConst.h */,
+				777A08AE1C72BC300039A455 /* STPickerViewConst.m */,
+				777A08AF1C72BC300039A455 /* STPickerViewUI.h */,
+				777A08B01C72BC300039A455 /* STPickerViewUI.m */,
 			);
 			path = STConfig;
 			sourceTree = "<group>";
@@ -190,12 +190,13 @@
 		777FD6AA1C71B0C700F2471B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = shentian;
 				TargetAttributes = {
 					777FD6B11C71B0C700F2471B = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = Z25J3BA353;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -237,14 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				670A02771C73DEB100BF8110 /* STPickerView.m in Sources */,
-				777A08B31C72BC300039A455 /* STConst.m in Sources */,
-				777A08B51C72BC300039A455 /* UIView+ST.m in Sources */,
+				777A08B31C72BC300039A455 /* STPickerViewConst.m in Sources */,
 				777FD6BD1C71B0C700F2471B /* ViewController.m in Sources */,
-				777A08B41C72BC300039A455 /* STUI.m in Sources */,
+				777A08B41C72BC300039A455 /* STPickerViewUI.m in Sources */,
 				777A08BA1C72C9C60039A455 /* STPickerSingle.m in Sources */,
 				777FD6BA1C71B0C700F2471B /* AppDelegate.m in Sources */,
 				777FD6B71C71B0C700F2471B /* main.m in Sources */,
 				777A08BE1C72F0590039A455 /* STPickerDate.m in Sources */,
+				70D325DE1DC973D60000BD39 /* UIView+STFrame.m in Sources */,
 				777A08C11C72F7680039A455 /* NSCalendar+ST.m in Sources */,
 				777FD6D21C71B1AE00F2471B /* STPickerArea.m in Sources */,
 			);
@@ -285,8 +286,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -328,8 +331,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -356,9 +361,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: stszl@sina.cn (89E47K5Z3F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Z25J3BA353;
 				INFOPLIST_FILE = STPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shentian.STPickerView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.st.cn.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -367,9 +375,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: stszl@sina.cn (89E47K5Z3F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Z25J3BA353;
 				INFOPLIST_FILE = STPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shentian.STPickerView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.st.cn.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

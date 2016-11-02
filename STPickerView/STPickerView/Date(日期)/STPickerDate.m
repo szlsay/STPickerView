@@ -89,11 +89,11 @@
     
     NSString *text;
     if (component == 0) {
-        text =  [NSString stringWithFormat:@"%d", row + 1900];
+        text =  [NSString stringWithFormat:@"%zd", row + 1900];
     }else if (component == 1){
-        text =  [NSString stringWithFormat:@"%d", row + 1];
+        text =  [NSString stringWithFormat:@"%zd", row + 1];
     }else{
-        text = [NSString stringWithFormat:@"%d", row + 1];
+        text = [NSString stringWithFormat:@"%zd", row + 1];
     }
 
     UILabel *label = [[UILabel alloc]init];

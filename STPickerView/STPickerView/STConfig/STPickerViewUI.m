@@ -1,9 +1,12 @@
 //
-//  STUI.m
-//  Copyright © 2016年 ST. All rights reserved.
+//  STPickerViewUI.m
+//  STPickerView
+//
+//  Created by https://github.com/STShenZhaoliang/STPickerView on 16/2/16.
+//  Copyright © 2016年 shentian. All rights reserved.
 //
 
-#import "STUI.h"
+#import "STPickerViewUI.h"
 
 /** 1.统一的较小间距 5*/
 CGFloat const STMarginSmall = 5;

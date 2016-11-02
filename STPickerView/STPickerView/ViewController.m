@@ -24,11 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     self.textArea.delegate = self;
     self.textSingle.delegate = self;
     self.textDate.delegate = self;
-    
 }
 
 
@@ -90,7 +88,7 @@
 
 - (void)pickerDate:(STPickerDate *)pickerDate year:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
 {
-    NSString *text = [NSString stringWithFormat:@"%d年%d月%d日", year, month, day];
+    NSString *text = [NSString stringWithFormat:@"%zd年%zd月%zd日", year, month, day];
     self.textDate.text = text;
 }
 #pragma mark - --- event response 事件相应 ---

@@ -1,6 +1,9 @@
 //
-//  STUI.h
-//  Copyright © 2016年 ST. All rights reserved.
+//  STPickerViewUI.h
+//  STPickerView
+//
+//  Created by https://github.com/STShenZhaoliang/STPickerView on 16/2/16.
+//  Copyright © 2016年 shentian. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

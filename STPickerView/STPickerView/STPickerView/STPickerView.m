@@ -28,13 +28,13 @@
     _title             = nil;
     _font              = [UIFont systemFontOfSize:15];
     _titleColor        = [UIColor blackColor];
-    _borderButtonColor = RGB(205, 205, 205);
+    _borderButtonColor = STRGB(205, 205, 205);
     _heightPicker      = 240;
     _contentMode       = STPickerContentModeBottom;
     
     // 2.设置自身的属性
     self.bounds = [UIScreen mainScreen].bounds;
-    self.backgroundColor = RGBA(0, 0, 0, 102.0/255);
+    self.backgroundColor = STRGBA(0, 0, 0, 102.0/255);
     self.layer.opacity = 0.0;
     [self addTarget:self action:@selector(remove) forControlEvents:UIControlEventTouchUpInside];
     
@@ -57,8 +57,8 @@
     
     if (self.contentMode == STPickerContentModeBottom) {
     }else {
-        self.buttonLeft.y = self.lineViewDown.bottom + STMarginSmall;
-        self.buttonRight.y = self.lineViewDown.bottom + STMarginSmall;
+        self.buttonLeft.st_y = self.lineViewDown.st_bottom + STMarginSmall;
+        self.buttonRight.st_y = self.lineViewDown.st_bottom + STMarginSmall;
     }
 }
 
@@ -87,7 +87,7 @@
     
     if (self.contentMode == STPickerContentModeBottom) {
         CGRect frameContent =  self.contentView.frame;
-        frameContent.origin.y -= self.contentView.height;
+        frameContent.origin.y -= self.contentView.st_height;
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self.layer setOpacity:1.0];
             self.contentView.frame = frameContent;
@@ -95,7 +95,7 @@
         }];
     }else {
         CGRect frameContent =  self.contentView.frame;
-        frameContent.origin.y -= (ScreenHeight+self.contentView.height)/2;
+        frameContent.origin.y -= (STScreenHeight+self.contentView.st_height)/2;
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self.layer setOpacity:1.0];
             self.contentView.frame = frameContent;
@@ -108,7 +108,7 @@
 {
     if (self.contentMode == STPickerContentModeBottom) {
         CGRect frameContent =  self.contentView.frame;
-        frameContent.origin.y += self.contentView.height;
+        frameContent.origin.y += self.contentView.st_height;
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self.layer setOpacity:0.0];
             self.contentView.frame = frameContent;
@@ -117,7 +117,7 @@
         }];
     }else {
         CGRect frameContent =  self.contentView.frame;
-        frameContent.origin.y += (ScreenHeight+self.contentView.height)/2;
+        frameContent.origin.y += (STScreenHeight+self.contentView.st_height)/2;
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self.layer setOpacity:0.0];
             self.contentView.frame = frameContent;
@@ -161,14 +161,14 @@
 - (void)setHeightPicker:(CGFloat)heightPicker
 {
     _heightPicker = heightPicker;
-    self.contentView.height = heightPicker;
+    self.contentView.st_height = heightPicker;
 }
 
 - (void)setContentMode:(STPickerContentMode)contentMode
 {
     _contentMode = contentMode;
     if (contentMode == STPickerContentModeCenter) {
-        self.contentView.height += STControlSystemHeight;
+        self.contentView.st_height += STControlSystemHeight;
     }
 }
 #pragma mark - --- getters 属性 ---
@@ -176,8 +176,8 @@
 {
     if (!_contentView) {
         CGFloat contentX = 0;
-        CGFloat contentY = ScreenHeight;
-        CGFloat contentW = ScreenWidth;
+        CGFloat contentY = STScreenHeight;
+        CGFloat contentW = STScreenWidth;
         CGFloat contentH = self.heightPicker;
         _contentView = [[UIView alloc]initWithFrame:CGRectMake(contentX, contentY, contentW, contentH)];
         [_contentView setBackgroundColor:[UIColor whiteColor]];
@@ -190,7 +190,7 @@
     if (!_lineView) {
         CGFloat lineX = 0;
         CGFloat lineY = STControlSystemHeight;
-        CGFloat lineW = self.contentView.width;
+        CGFloat lineW = self.contentView.st_width;
         CGFloat lineH = 0.5;
         _lineView = [[UIView alloc]initWithFrame:CGRectMake(lineX, lineY, lineW, lineH)];
         [_lineView setBackgroundColor:self.borderButtonColor];
@@ -201,10 +201,10 @@
 - (UIPickerView *)pickerView
 {
     if (!_pickerView) {
-        CGFloat pickerW = self.contentView.width;
-        CGFloat pickerH = self.contentView.height - self.lineView.bottom;
+        CGFloat pickerW = self.contentView.st_width;
+        CGFloat pickerH = self.contentView.st_height - self.lineView.st_bottom;
         CGFloat pickerX = 0;
-        CGFloat pickerY = self.lineView.bottom;
+        CGFloat pickerY = self.lineView.st_bottom;
         _pickerView = [[UIPickerView alloc]initWithFrame:CGRectMake(pickerX, pickerY, pickerW, pickerH)];
         [_pickerView setBackgroundColor:[UIColor whiteColor]];
     }
@@ -215,9 +215,9 @@
 {
     if (!_buttonLeft) {
         CGFloat leftW = STControlSystemHeight;
-        CGFloat leftH = self.lineView.top - STMargin;
+        CGFloat leftH = self.lineView.st_top - STMargin;
         CGFloat leftX = STMarginBig;
-        CGFloat leftY = (self.lineView.top - leftH) / 2;
+        CGFloat leftY = (self.lineView.st_top - leftH) / 2;
         _buttonLeft = [[UIButton alloc]initWithFrame:CGRectMake(leftX, leftY, leftW, leftH)];
         [_buttonLeft setTitle:@"取消" forState:UIControlStateNormal];
         [_buttonLeft setTitleColor:self.titleColor forState:UIControlStateNormal];
@@ -231,10 +231,10 @@
 - (UIButton *)buttonRight
 {
     if (!_buttonRight) {
-        CGFloat rightW = self.buttonLeft.width;
-        CGFloat rightH = self.buttonLeft.height;
-        CGFloat rightX = self.contentView.width - rightW - self.buttonLeft.x;
-        CGFloat rightY = self.buttonLeft.y;
+        CGFloat rightW = self.buttonLeft.st_width;
+        CGFloat rightH = self.buttonLeft.st_height;
+        CGFloat rightX = self.contentView.st_width - rightW - self.buttonLeft.st_x;
+        CGFloat rightY = self.buttonLeft.st_y;
         _buttonRight = [[UIButton alloc]initWithFrame:CGRectMake(rightX, rightY, rightW, rightH)];
         [_buttonRight setTitle:@"确定" forState:UIControlStateNormal];
         [_buttonRight setTitleColor:self.titleColor forState:UIControlStateNormal];
@@ -248,10 +248,10 @@
 - (UILabel *)labelTitle
 {
     if (!_labelTitle) {
-        CGFloat titleX = self.buttonLeft.right + STMarginSmall;
+        CGFloat titleX = self.buttonLeft.st_right + STMarginSmall;
         CGFloat titleY = 0;
-        CGFloat titleW = self.contentView.width - titleX * 2;
-        CGFloat titleH = self.lineView.top;
+        CGFloat titleW = self.contentView.st_width - titleX * 2;
+        CGFloat titleH = self.lineView.st_top;
         _labelTitle = [[UILabel alloc]initWithFrame:CGRectMake(titleX, titleY, titleW, titleH)];
         [_labelTitle setTextAlignment:NSTextAlignmentCenter];
         [_labelTitle setTextColor:self.titleColor];
@@ -265,8 +265,8 @@
 {
     if (!_lineViewDown) {
         CGFloat lineX = 0;
-        CGFloat lineY = self.pickerView.bottom;
-        CGFloat lineW = self.contentView.width;
+        CGFloat lineY = self.pickerView.st_bottom;
+        CGFloat lineW = self.contentView.st_width;
         CGFloat lineH = 0.5;
         _lineViewDown = [[UIView alloc]initWithFrame:CGRectMake(lineX, lineY, lineW, lineH)];
         [_lineViewDown setBackgroundColor:self.borderButtonColor];

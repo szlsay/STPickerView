@@ -57,11 +57,11 @@
 {
     
     if (component == 0) {
-        return (self.width-self.widthPickerComponent)/2;
+        return (self.st_width-self.widthPickerComponent)/2;
     }else if (component == 1){
         return self.widthPickerComponent;
     }else {
-        return (self.width-self.widthPickerComponent)/2;
+        return (self.st_width-self.widthPickerComponent)/2;
     }
 }
 
