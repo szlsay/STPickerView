@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-7g-wGG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XPO-wm-t4J"/>
+                                    <constraint firstAttribute="width" constant="200" id="zaZ-Ma-Xvk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择人民币" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bzx-p0-1eh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UCM-z9-Qw6"/>
+                                    <constraint firstAttribute="width" constant="200" id="iUV-Zx-CvC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择日期" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgR-dp-bz9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5dC-BH-FbD"/>
+                                    <constraint firstAttribute="width" constant="200" id="XwZ-c5-xDZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FgR-dp-bz9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5fi-y1-nVj"/>
+                            <constraint firstItem="Bzx-p0-1eh" firstAttribute="top" secondItem="CaY-7g-wGG" secondAttribute="bottom" constant="33" id="8TH-0X-ZH9"/>
+                            <constraint firstItem="FgR-dp-bz9" firstAttribute="top" secondItem="Bzx-p0-1eh" secondAttribute="bottom" constant="27" id="PwD-xD-7Eh"/>
+                            <constraint firstItem="CaY-7g-wGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VhV-fv-WcY"/>
+                            <constraint firstItem="Bzx-p0-1eh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azL-Vw-io2"/>
+                            <constraint firstItem="CaY-7g-wGG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="105" id="kUc-P5-Thi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textArea" destination="CaY-7g-wGG" id="1RL-ex-czd"/>
+                        <outlet property="textDate" destination="FgR-dp-bz9" id="eIx-rL-MHE"/>
+                        <outlet property="textSingle" destination="Bzx-p0-1eh" id="wuX-W5-rcS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
