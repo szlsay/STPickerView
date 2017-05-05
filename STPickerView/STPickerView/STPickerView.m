@@ -36,8 +36,8 @@
     self.bounds = [UIScreen mainScreen].bounds;
     self.backgroundColor = STRGBA(0, 0, 0, 102.0/255);
     self.layer.opacity = 0.0;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self addTarget:self action:@selector(remove) forControlEvents:UIControlEventTouchUpInside];
-    
     // 3.添加子视图
     [self addSubview:self.contentView];
     [self.contentView addSubview:self.lineView];
@@ -99,6 +99,7 @@
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self.layer setOpacity:1.0];
             self.contentView.frame = frameContent;
+            self.contentView.autoresizingMask =  UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         } completion:^(BOOL finished) {
         }];
     }
@@ -181,6 +182,7 @@
         CGFloat contentH = self.heightPicker;
         _contentView = [[UIView alloc]initWithFrame:CGRectMake(contentX, contentY, contentW, contentH)];
         [_contentView setBackgroundColor:[UIColor whiteColor]];
+        _contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     }
     return _contentView;
 }
@@ -194,6 +196,7 @@
         CGFloat lineH = 0.5;
         _lineView = [[UIView alloc]initWithFrame:CGRectMake(lineX, lineY, lineW, lineH)];
         [_lineView setBackgroundColor:self.borderButtonColor];
+        _lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return _lineView;
 }
@@ -207,6 +210,7 @@
         CGFloat pickerY = self.lineView.st_bottom;
         _pickerView = [[UIPickerView alloc]initWithFrame:CGRectMake(pickerX, pickerY, pickerW, pickerH)];
         [_pickerView setBackgroundColor:[UIColor whiteColor]];
+        _pickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return _pickerView;
 }
@@ -224,6 +228,7 @@
         [_buttonLeft addBorderColor:self.borderButtonColor];
         [_buttonLeft.titleLabel setFont:self.font];
         [_buttonLeft addTarget:self action:@selector(selectedCancel) forControlEvents:UIControlEventTouchUpInside];
+        _buttonLeft.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
     }
     return _buttonLeft;
 }
@@ -241,6 +246,7 @@
         [_buttonRight addBorderColor:self.borderButtonColor];
         [_buttonRight.titleLabel setFont:self.font];
         [_buttonRight addTarget:self action:@selector(selectedOk) forControlEvents:UIControlEventTouchUpInside];
+        _buttonRight.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
     }
     return _buttonRight;
 }
@@ -257,6 +263,7 @@
         [_labelTitle setTextColor:self.titleColor];
         [_labelTitle setFont:self.font];
         _labelTitle.adjustsFontSizeToFitWidth = YES;
+        _labelTitle.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return _labelTitle;
 }
@@ -270,6 +277,7 @@
         CGFloat lineH = 0.5;
         _lineViewDown = [[UIView alloc]initWithFrame:CGRectMake(lineX, lineY, lineW, lineH)];
         [_lineViewDown setBackgroundColor:self.borderButtonColor];
+        _lineViewDown.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return _lineViewDown;
 }

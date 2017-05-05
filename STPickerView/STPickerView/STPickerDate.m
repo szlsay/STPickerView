@@ -36,11 +36,11 @@
     
     [self.pickerView setDelegate:self];
     [self.pickerView setDataSource:self];
+    [self.pickerView reloadAllComponents];
     
     [self.pickerView selectRow:(_year - _yearLeast) inComponent:0 animated:NO];
     [self.pickerView selectRow:(_month - 1) inComponent:1 animated:NO];
     [self.pickerView selectRow:(_day - 1) inComponent:2 animated:NO];
-
 }
 
 #pragma mark - --- delegate 视图委托 ---
@@ -87,6 +87,13 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view
 {
     
+    //设置分割线的颜色
+    [pickerView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.frame.size.height <=1) {
+            obj.backgroundColor = self.borderButtonColor;
+        }
+    }];
+    
     NSString *text;
     if (component == 0) {
         text =  [NSString stringWithFormat:@"%zd", row + 1900];
@@ -128,9 +135,7 @@
 {
     _yearLeast = yearLeast;
 }
-
-- (void)setYearSum:(NSInteger)yearSum
-{
+- (void)setYearSum:(NSInteger)yearSum{
     _yearSum = yearSum;
 }
 #pragma mark - --- getters 属性 ---

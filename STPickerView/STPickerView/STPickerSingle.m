@@ -72,6 +72,12 @@
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view
 {
+    //设置分割线的颜色
+    [pickerView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.frame.size.height <=1) {
+            obj.backgroundColor = self.borderButtonColor;
+        }
+    }];
     
     if (component == 0) {
         return nil;
@@ -91,7 +97,10 @@
 
 - (void)selectedOk
 {
-    [self.delegate pickerSingle:self selectedTitle:self.selectedTitle];
+    if ([self.delegate respondsToSelector:@selector(pickerSingle:selectedTitle:)]) {
+        [self.delegate pickerSingle:self selectedTitle:self.selectedTitle];
+    }
+    
     [super selectedOk];
 }
 

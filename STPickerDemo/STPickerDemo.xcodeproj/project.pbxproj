@@ -19,7 +19,6 @@
 		708431281EBC1BEE00EE96D7 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431181EBC1BEE00EE96D7 /* STPickerDate.m */; };
 		708431291EBC1BEE00EE96D7 /* STPickerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7084311A1EBC1BEE00EE96D7 /* STPickerSingle.m */; };
 		7084312A1EBC1BEE00EE96D7 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7084311C1EBC1BEE00EE96D7 /* STPickerView.m */; };
-		7084312B1EBC1BEE00EE96D7 /* STPickerViewConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7084311F1EBC1BEE00EE96D7 /* STPickerViewConst.m */; };
 		7084312C1EBC1BEE00EE96D7 /* STPickerViewUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431211EBC1BEE00EE96D7 /* STPickerViewUI.m */; };
 		7084312D1EBC1BEE00EE96D7 /* UIView+STFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431231EBC1BEE00EE96D7 /* UIView+STFrame.m */; };
 /* End PBXBuildFile section */
@@ -48,7 +47,6 @@
 		7084311C1EBC1BEE00EE96D7 /* STPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerView.m; sourceTree = "<group>"; };
 		7084311D1EBC1BEE00EE96D7 /* STPickerViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewConfig.h; sourceTree = "<group>"; };
 		7084311E1EBC1BEE00EE96D7 /* STPickerViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewConst.h; sourceTree = "<group>"; };
-		7084311F1EBC1BEE00EE96D7 /* STPickerViewConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerViewConst.m; sourceTree = "<group>"; };
 		708431201EBC1BEE00EE96D7 /* STPickerViewUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewUI.h; sourceTree = "<group>"; };
 		708431211EBC1BEE00EE96D7 /* STPickerViewUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerViewUI.m; sourceTree = "<group>"; };
 		708431221EBC1BEE00EE96D7 /* UIView+STFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STFrame.h"; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				7084311C1EBC1BEE00EE96D7 /* STPickerView.m */,
 				7084311D1EBC1BEE00EE96D7 /* STPickerViewConfig.h */,
 				7084311E1EBC1BEE00EE96D7 /* STPickerViewConst.h */,
-				7084311F1EBC1BEE00EE96D7 /* STPickerViewConst.m */,
 				708431201EBC1BEE00EE96D7 /* STPickerViewUI.h */,
 				708431211EBC1BEE00EE96D7 /* STPickerViewUI.m */,
 				708431221EBC1BEE00EE96D7 /* UIView+STFrame.h */,
@@ -234,7 +231,6 @@
 				7084312A1EBC1BEE00EE96D7 /* STPickerView.m in Sources */,
 				707B48951EBC103400028BF9 /* ViewController.m in Sources */,
 				707B48941EBC103400028BF9 /* AppDelegate.m in Sources */,
-				7084312B1EBC1BEE00EE96D7 /* STPickerViewConst.m in Sources */,
 				707B48771EBC0FE200028BF9 /* main.m in Sources */,
 				708431271EBC1BEE00EE96D7 /* STPickerArea.m in Sources */,
 				7084312D1EBC1BEE00EE96D7 /* UIView+STFrame.m in Sources */,

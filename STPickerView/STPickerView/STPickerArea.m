@@ -122,6 +122,14 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view
 {
 
+    //设置分割线的颜色
+    [pickerView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.frame.size.height <=1) {
+            obj.backgroundColor = self.borderButtonColor;
+        }
+    }];
+    
+    
     NSString *text;
     if (component == 0) {
         text =  self.arrayProvince[row];
@@ -145,7 +153,9 @@
 
 - (void)selectedOk
 {
-    [self.delegate pickerArea:self province:self.province city:self.city area:self.area];
+    if ([self.delegate respondsToSelector:@selector(pickerArea:province:city:area:)]) {
+        [self.delegate pickerArea:self province:self.province city:self.city area:self.area];
+    }
     [super selectedOk];
 }
 
@@ -185,7 +195,7 @@
 - (NSMutableArray *)arrayProvince
 {
     if (!_arrayProvince) {
-        _arrayProvince = [NSMutableArray array];
+        _arrayProvince = @[].mutableCopy;
     }
     return _arrayProvince;
 }
@@ -193,7 +203,7 @@
 - (NSMutableArray *)arrayCity
 {
     if (!_arrayCity) {
-        _arrayCity = [NSMutableArray array];
+        _arrayCity = @[].mutableCopy;
     }
     return _arrayCity;
 }
@@ -201,7 +211,7 @@
 - (NSMutableArray *)arrayArea
 {
     if (!_arrayArea) {
-        _arrayArea = [NSMutableArray array];
+        _arrayArea = @[].mutableCopy;
     }
     return _arrayArea;
 }
@@ -209,7 +219,7 @@
 - (NSMutableArray *)arraySelected
 {
     if (!_arraySelected) {
-        _arraySelected = [NSMutableArray array];
+        _arraySelected = @[].mutableCopy;
     }
     return _arraySelected;
 }

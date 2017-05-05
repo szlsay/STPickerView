@@ -41,7 +41,7 @@
         
         STPickerArea *pickerArea = [[STPickerArea alloc]init];
         [pickerArea setDelegate:self];
-        [pickerArea setContentMode:STPickerContentModeCenter];
+//        [pickerArea setContentMode:STPickerContentModeCenter];
         [pickerArea show];
         
     }
@@ -69,6 +69,7 @@
         [self.textDate resignFirstResponder];
         
         STPickerDate *pickerDate = [[STPickerDate alloc]init];
+        [pickerDate setYearLeast:2000];
         [pickerDate setDelegate:self];
         [pickerDate show];
     }
