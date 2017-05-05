@@ -70,6 +70,7 @@
         
         STPickerDate *pickerDate = [[STPickerDate alloc]init];
         [pickerDate setYearLeast:2000];
+        [pickerDate setYearSum:50];
         [pickerDate setDelegate:self];
         [pickerDate show];
     }

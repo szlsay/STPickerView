@@ -36,11 +36,6 @@
     
     [self.pickerView setDelegate:self];
     [self.pickerView setDataSource:self];
-    [self.pickerView reloadAllComponents];
-    
-    [self.pickerView selectRow:(_year - _yearLeast) inComponent:0 animated:NO];
-    [self.pickerView selectRow:(_month - 1) inComponent:1 animated:NO];
-    [self.pickerView selectRow:(_day - 1) inComponent:2 animated:NO];
 }
 
 #pragma mark - --- delegate 视图委托 ---
@@ -96,7 +91,7 @@
     
     NSString *text;
     if (component == 0) {
-        text =  [NSString stringWithFormat:@"%zd", row + 1900];
+        text =  [NSString stringWithFormat:@"%zd", row + self.yearLeast];
     }else if (component == 1){
         text =  [NSString stringWithFormat:@"%zd", row + 1];
     }else{
@@ -133,10 +128,24 @@
 
 - (void)setYearLeast:(NSInteger)yearLeast
 {
+    
+    if (yearLeast<=0) {
+        return;
+    }
+    
     _yearLeast = yearLeast;
+    [self.pickerView selectRow:(_year - _yearLeast) inComponent:0 animated:NO];
+    [self.pickerView selectRow:(_month - 1) inComponent:1 animated:NO];
+    [self.pickerView selectRow:(_day - 1) inComponent:2 animated:NO];
+    [self.pickerView reloadAllComponents];
 }
 - (void)setYearSum:(NSInteger)yearSum{
+    if (yearSum<=0) {
+        return;
+    }
+    
     _yearSum = yearSum;
+    [self.pickerView reloadAllComponents];
 }
 #pragma mark - --- getters 属性 ---
 
