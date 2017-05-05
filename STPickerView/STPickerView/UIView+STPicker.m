@@ -6,9 +6,9 @@
 //  Copyright © 2016年 ST. All rights reserved.
 //
 
-#import "UIView+STFrame.h"
+#import "UIView+STPicker.h"
 
-@implementation UIView (STFrame)
+@implementation UIView (STPicker)
 
 - (void)setSt_x:(CGFloat)st_x
 {

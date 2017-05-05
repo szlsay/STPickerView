@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSCalendar (ST)
+@interface NSCalendar (STPicker)
 
 /**
  *  1.当前的日期数据元件模型

@@ -11,6 +11,6 @@
 
 #import "STPickerViewConst.h"
 #import "STPickerViewUI.h"
-#import "UIView+STFrame.h"
+#import "UIView+STPicker.h"
 
 #endif /* STConfig_h */

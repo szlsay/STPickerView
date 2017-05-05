@@ -14,7 +14,7 @@ static UIScreenType UIScreenType_iPhone5 = 320.0f;
 static UIScreenType UIScreenType_iPhone6 = 375.0f;
 static UIScreenType UIScreenType_iPhone6P = 414.0f;
 
-@interface UIView (STFrame)
+@interface UIView (STPicker)
 
 /** 1.间隔X值 */
 @property (nonatomic, assign) CGFloat st_x;

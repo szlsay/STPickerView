@@ -7,7 +7,7 @@
 //
 
 #import "STPickerDate.h"
-#import "NSCalendar+ST.h"
+#import "NSCalendar+STPicker.h"
 @interface STPickerDate()<UIPickerViewDataSource, UIPickerViewDelegate>
 /** 1.年 */
 @property (nonatomic, assign)NSInteger year;

@@ -6,9 +6,9 @@
 //  Copyright © 2015年 ST. All rights reserved.
 //
 
-#import "NSCalendar+ST.h"
+#import "NSCalendar+STPicker.h"
 
-@implementation NSCalendar (ST)
+@implementation NSCalendar (STPicker)
 
 + (NSDateComponents *)currentDateComponents
 {

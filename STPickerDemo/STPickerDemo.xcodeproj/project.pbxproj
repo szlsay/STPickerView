@@ -14,13 +14,13 @@
 		707B48951EBC103400028BF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 707B48921EBC103400028BF9 /* ViewController.m */; };
 		707B48961EBC103400028BF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707B48931EBC103400028BF9 /* Main.storyboard */; };
 		708431251EBC1BEE00EE96D7 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 708431111EBC1BEE00EE96D7 /* area.plist */; };
-		708431261EBC1BEE00EE96D7 /* NSCalendar+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431141EBC1BEE00EE96D7 /* NSCalendar+ST.m */; };
 		708431271EBC1BEE00EE96D7 /* STPickerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431161EBC1BEE00EE96D7 /* STPickerArea.m */; };
 		708431281EBC1BEE00EE96D7 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431181EBC1BEE00EE96D7 /* STPickerDate.m */; };
 		708431291EBC1BEE00EE96D7 /* STPickerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7084311A1EBC1BEE00EE96D7 /* STPickerSingle.m */; };
 		7084312A1EBC1BEE00EE96D7 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7084311C1EBC1BEE00EE96D7 /* STPickerView.m */; };
 		7084312C1EBC1BEE00EE96D7 /* STPickerViewUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431211EBC1BEE00EE96D7 /* STPickerViewUI.m */; };
-		7084312D1EBC1BEE00EE96D7 /* UIView+STFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431231EBC1BEE00EE96D7 /* UIView+STFrame.m */; };
+		7084312D1EBC1BEE00EE96D7 /* UIView+STPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 708431231EBC1BEE00EE96D7 /* UIView+STPicker.m */; };
+		70B0DEBF1EBC55CA00837A55 /* NSCalendar+STPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B0DEBE1EBC55CA00837A55 /* NSCalendar+STPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,6 @@
 		707B48921EBC103400028BF9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		707B48931EBC103400028BF9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		708431111EBC1BEE00EE96D7 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
-		708431131EBC1BEE00EE96D7 /* NSCalendar+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+ST.h"; sourceTree = "<group>"; };
-		708431141EBC1BEE00EE96D7 /* NSCalendar+ST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+ST.m"; sourceTree = "<group>"; };
 		708431151EBC1BEE00EE96D7 /* STPickerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerArea.h; sourceTree = "<group>"; };
 		708431161EBC1BEE00EE96D7 /* STPickerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerArea.m; sourceTree = "<group>"; };
 		708431171EBC1BEE00EE96D7 /* STPickerDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerDate.h; sourceTree = "<group>"; };
@@ -49,8 +47,10 @@
 		7084311E1EBC1BEE00EE96D7 /* STPickerViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewConst.h; sourceTree = "<group>"; };
 		708431201EBC1BEE00EE96D7 /* STPickerViewUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewUI.h; sourceTree = "<group>"; };
 		708431211EBC1BEE00EE96D7 /* STPickerViewUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerViewUI.m; sourceTree = "<group>"; };
-		708431221EBC1BEE00EE96D7 /* UIView+STFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STFrame.h"; sourceTree = "<group>"; };
-		708431231EBC1BEE00EE96D7 /* UIView+STFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+STFrame.m"; sourceTree = "<group>"; };
+		708431221EBC1BEE00EE96D7 /* UIView+STPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STPicker.h"; sourceTree = "<group>"; };
+		708431231EBC1BEE00EE96D7 /* UIView+STPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+STPicker.m"; sourceTree = "<group>"; };
+		70B0DEBD1EBC55A100837A55 /* NSCalendar+STPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+STPicker.h"; sourceTree = "<group>"; };
+		70B0DEBE1EBC55CA00837A55 /* NSCalendar+STPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+STPicker.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +134,8 @@
 		708431121EBC1BEE00EE96D7 /* STPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				708431131EBC1BEE00EE96D7 /* NSCalendar+ST.h */,
-				708431141EBC1BEE00EE96D7 /* NSCalendar+ST.m */,
+				70B0DEBD1EBC55A100837A55 /* NSCalendar+STPicker.h */,
+				70B0DEBE1EBC55CA00837A55 /* NSCalendar+STPicker.m */,
 				708431151EBC1BEE00EE96D7 /* STPickerArea.h */,
 				708431161EBC1BEE00EE96D7 /* STPickerArea.m */,
 				708431171EBC1BEE00EE96D7 /* STPickerDate.h */,
@@ -148,8 +148,8 @@
 				7084311E1EBC1BEE00EE96D7 /* STPickerViewConst.h */,
 				708431201EBC1BEE00EE96D7 /* STPickerViewUI.h */,
 				708431211EBC1BEE00EE96D7 /* STPickerViewUI.m */,
-				708431221EBC1BEE00EE96D7 /* UIView+STFrame.h */,
-				708431231EBC1BEE00EE96D7 /* UIView+STFrame.m */,
+				708431221EBC1BEE00EE96D7 /* UIView+STPicker.h */,
+				708431231EBC1BEE00EE96D7 /* UIView+STPicker.m */,
 			);
 			path = STPickerView;
 			sourceTree = "<group>";
@@ -232,10 +232,10 @@
 				707B48951EBC103400028BF9 /* ViewController.m in Sources */,
 				707B48941EBC103400028BF9 /* AppDelegate.m in Sources */,
 				707B48771EBC0FE200028BF9 /* main.m in Sources */,
+				70B0DEBF1EBC55CA00837A55 /* NSCalendar+STPicker.m in Sources */,
 				708431271EBC1BEE00EE96D7 /* STPickerArea.m in Sources */,
-				7084312D1EBC1BEE00EE96D7 /* UIView+STFrame.m in Sources */,
+				7084312D1EBC1BEE00EE96D7 /* UIView+STPicker.m in Sources */,
 				708431291EBC1BEE00EE96D7 /* STPickerSingle.m in Sources */,
-				708431261EBC1BEE00EE96D7 /* NSCalendar+ST.m in Sources */,
 				7084312C1EBC1BEE00EE96D7 /* STPickerViewUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
