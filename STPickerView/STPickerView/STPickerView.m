@@ -8,6 +8,8 @@
 
 #import "STPickerView.h"
 
+#define STScreenWidth  CGRectGetWidth([UIScreen mainScreen].bounds)
+#define STScreenHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
 @implementation STPickerView
 
@@ -28,13 +30,13 @@
     _title             = nil;
     _font              = [UIFont systemFontOfSize:15];
     _titleColor        = [UIColor blackColor];
-    _borderButtonColor = STRGB(205, 205, 205);
+    _borderButtonColor = [UIColor colorWithRed:205.0/255 green:205.0/255 blue:205.0/255 alpha:1] ;
     _heightPicker      = 240;
     _contentMode       = STPickerContentModeBottom;
     
     // 2.设置自身的属性
     self.bounds = [UIScreen mainScreen].bounds;
-    self.backgroundColor = STRGBA(0, 0, 0, 102.0/255);
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:102.0/255];
     self.layer.opacity = 0.0;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self addTarget:self action:@selector(remove) forControlEvents:UIControlEventTouchUpInside];

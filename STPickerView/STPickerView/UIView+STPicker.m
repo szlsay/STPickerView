@@ -146,21 +146,6 @@
     self.frame = frame;
 }
 
-
-- (void)st_fill
-{
-    self.frame = CGRectMake(0, 0, self.superview.st_width, self.superview.st_height);
-}
-
-- (void)addTarget:(id)target
-           action:(SEL)action;
-{
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:target
-                                                                         action:action];
-    self.userInteractionEnabled = YES;
-    [self addGestureRecognizer:tap];
-}
-
 - (void)addBorderColor:(UIColor *)color{
     [self.layer setBorderColor:color.CGColor];
     [self.layer setBorderWidth:0.5];

@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef CGFloat UIScreenType;
-
-static UIScreenType UIScreenType_iPhone5 = 320.0f;
-static UIScreenType UIScreenType_iPhone6 = 375.0f;
-static UIScreenType UIScreenType_iPhone6P = 414.0f;
-
 @interface UIView (STPicker)
 
 /** 1.间隔X值 */
@@ -52,25 +46,12 @@ static UIScreenType UIScreenType_iPhone6P = 414.0f;
 /** 12.右 */
 @property (nonatomic) CGFloat st_right;
 
-/** 1.填充父视图 */
-- (void)st_fill;
-
 /**
  *  1.添加边框
  *
  *  @param color <#color description#>
  */
 - (void)addBorderColor:(UIColor *)color;
-
-/**
- *  2.UIView 的点击事件
- *
- *  @param target   目标
- *  @param action   事件
- */
-
-- (void)addTarget:(id)target
-           action:(SEL)action;
 
 @end
 

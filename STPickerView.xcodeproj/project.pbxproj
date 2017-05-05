@@ -12,8 +12,6 @@
 		708431041EBC19C300EE96D7 /* STPickerDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360D1E20888E001601A4 /* STPickerDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		708431051EBC19C300EE96D7 /* STPickerSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360F1E20888F001601A4 /* STPickerSingle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		708431061EBC19C300EE96D7 /* STPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436111E20888F001601A4 /* STPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		708431071EBC19C300EE96D7 /* STPickerViewConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436131E20888F001601A4 /* STPickerViewConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		708431081EBC19C300EE96D7 /* STPickerViewConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436141E20888F001601A4 /* STPickerViewConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		708431091EBC19C300EE96D7 /* STPickerViewUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436161E20888F001601A4 /* STPickerViewUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A435F81E208863001601A4 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70A435E41E208863001601A4 /* area.plist */; };
 		70A4361B1E20888F001601A4 /* NSCalendar+STPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A4360A1E20888E001601A4 /* NSCalendar+STPicker.m */; };
@@ -40,8 +38,6 @@
 		70A436101E20888F001601A4 /* STPickerSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerSingle.m; sourceTree = "<group>"; };
 		70A436111E20888F001601A4 /* STPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerView.h; sourceTree = "<group>"; };
 		70A436121E20888F001601A4 /* STPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerView.m; sourceTree = "<group>"; };
-		70A436131E20888F001601A4 /* STPickerViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewConfig.h; sourceTree = "<group>"; };
-		70A436141E20888F001601A4 /* STPickerViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewConst.h; sourceTree = "<group>"; };
 		70A436161E20888F001601A4 /* STPickerViewUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewUI.h; sourceTree = "<group>"; };
 		70A436171E20888F001601A4 /* STPickerViewUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerViewUI.m; sourceTree = "<group>"; };
 		70B0DEC01EBC55F400837A55 /* UIView+STPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STPicker.h"; sourceTree = "<group>"; };
@@ -114,8 +110,6 @@
 				70A436101E20888F001601A4 /* STPickerSingle.m */,
 				70A436111E20888F001601A4 /* STPickerView.h */,
 				70A436121E20888F001601A4 /* STPickerView.m */,
-				70A436131E20888F001601A4 /* STPickerViewConfig.h */,
-				70A436141E20888F001601A4 /* STPickerViewConst.h */,
 				70A436161E20888F001601A4 /* STPickerViewUI.h */,
 				70A436171E20888F001601A4 /* STPickerViewUI.m */,
 				70B0DEC01EBC55F400837A55 /* UIView+STPicker.h */,
@@ -136,8 +130,6 @@
 				708431041EBC19C300EE96D7 /* STPickerDate.h in Headers */,
 				708431051EBC19C300EE96D7 /* STPickerSingle.h in Headers */,
 				708431061EBC19C300EE96D7 /* STPickerView.h in Headers */,
-				708431071EBC19C300EE96D7 /* STPickerViewConfig.h in Headers */,
-				708431081EBC19C300EE96D7 /* STPickerViewConst.h in Headers */,
 				708431091EBC19C300EE96D7 /* STPickerViewUI.h in Headers */,
 				70B0DEC21EBC55F400837A55 /* UIView+STPicker.h in Headers */,
 			);

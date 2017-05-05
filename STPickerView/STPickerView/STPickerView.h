@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "STPickerViewConfig.h"
+#import "STPickerViewUI.h"
+#import "UIView+STPicker.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
