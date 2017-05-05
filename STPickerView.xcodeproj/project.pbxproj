@@ -7,24 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70A435F51E208863001601A4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70A435E01E208863001601A4 /* Info.plist */; };
+		708431021EBC19C300EE96D7 /* NSCalendar+ST.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436091E20888E001601A4 /* NSCalendar+ST.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708431031EBC19C300EE96D7 /* STPickerArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360B1E20888E001601A4 /* STPickerArea.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708431041EBC19C300EE96D7 /* STPickerDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360D1E20888E001601A4 /* STPickerDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708431051EBC19C300EE96D7 /* STPickerSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360F1E20888F001601A4 /* STPickerSingle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708431061EBC19C300EE96D7 /* STPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436111E20888F001601A4 /* STPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708431071EBC19C300EE96D7 /* STPickerViewConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436131E20888F001601A4 /* STPickerViewConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708431081EBC19C300EE96D7 /* STPickerViewConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436141E20888F001601A4 /* STPickerViewConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708431091EBC19C300EE96D7 /* STPickerViewUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436161E20888F001601A4 /* STPickerViewUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7084310A1EBC19C300EE96D7 /* UIView+STFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436181E20888F001601A4 /* UIView+STFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A435F81E208863001601A4 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70A435E41E208863001601A4 /* area.plist */; };
-		70A4361A1E20888F001601A4 /* NSCalendar+ST.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436091E20888E001601A4 /* NSCalendar+ST.h */; };
 		70A4361B1E20888F001601A4 /* NSCalendar+ST.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A4360A1E20888E001601A4 /* NSCalendar+ST.m */; };
-		70A4361C1E20888F001601A4 /* STPickerArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360B1E20888E001601A4 /* STPickerArea.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A4361D1E20888F001601A4 /* STPickerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A4360C1E20888E001601A4 /* STPickerArea.m */; };
-		70A4361E1E20888F001601A4 /* STPickerDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360D1E20888E001601A4 /* STPickerDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A4361F1E20888F001601A4 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A4360E1E20888E001601A4 /* STPickerDate.m */; };
-		70A436201E20888F001601A4 /* STPickerSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A4360F1E20888F001601A4 /* STPickerSingle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A436211E20888F001601A4 /* STPickerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A436101E20888F001601A4 /* STPickerSingle.m */; };
-		70A436221E20888F001601A4 /* STPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436111E20888F001601A4 /* STPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A436231E20888F001601A4 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A436121E20888F001601A4 /* STPickerView.m */; };
-		70A436241E20888F001601A4 /* STPickerViewConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436131E20888F001601A4 /* STPickerViewConfig.h */; };
-		70A436251E20888F001601A4 /* STPickerViewConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436141E20888F001601A4 /* STPickerViewConst.h */; };
 		70A436261E20888F001601A4 /* STPickerViewConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A436151E20888F001601A4 /* STPickerViewConst.m */; };
-		70A436271E20888F001601A4 /* STPickerViewUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436161E20888F001601A4 /* STPickerViewUI.h */; };
 		70A436281E20888F001601A4 /* STPickerViewUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A436171E20888F001601A4 /* STPickerViewUI.m */; };
-		70A436291E20888F001601A4 /* UIView+STFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A436181E20888F001601A4 /* UIView+STFrame.h */; };
 		70A4362A1E20888F001601A4 /* UIView+STFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A436191E20888F001601A4 /* UIView+STFrame.m */; };
 /* End PBXBuildFile section */
 
@@ -135,15 +134,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A4361C1E20888F001601A4 /* STPickerArea.h in Headers */,
-				70A436201E20888F001601A4 /* STPickerSingle.h in Headers */,
-				70A436221E20888F001601A4 /* STPickerView.h in Headers */,
-				70A4361E1E20888F001601A4 /* STPickerDate.h in Headers */,
-				70A436241E20888F001601A4 /* STPickerViewConfig.h in Headers */,
-				70A4361A1E20888F001601A4 /* NSCalendar+ST.h in Headers */,
-				70A436271E20888F001601A4 /* STPickerViewUI.h in Headers */,
-				70A436291E20888F001601A4 /* UIView+STFrame.h in Headers */,
-				70A436251E20888F001601A4 /* STPickerViewConst.h in Headers */,
+				708431021EBC19C300EE96D7 /* NSCalendar+ST.h in Headers */,
+				708431031EBC19C300EE96D7 /* STPickerArea.h in Headers */,
+				708431041EBC19C300EE96D7 /* STPickerDate.h in Headers */,
+				708431051EBC19C300EE96D7 /* STPickerSingle.h in Headers */,
+				708431061EBC19C300EE96D7 /* STPickerView.h in Headers */,
+				708431071EBC19C300EE96D7 /* STPickerViewConfig.h in Headers */,
+				708431081EBC19C300EE96D7 /* STPickerViewConst.h in Headers */,
+				708431091EBC19C300EE96D7 /* STPickerViewUI.h in Headers */,
+				7084310A1EBC19C300EE96D7 /* UIView+STFrame.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A435F51E208863001601A4 /* Info.plist in Resources */,
 				70A435F81E208863001601A4 /* area.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -318,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -346,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.cn.STPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -366,6 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.cn.STPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

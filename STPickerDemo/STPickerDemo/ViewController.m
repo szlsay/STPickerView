@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import <STPickerArea.h>
-#import <STPickerDate.h>
-#import <STPickerSingle.h>
+#import "STPickerView.h"
+#import "STPickerSingle.h"
+#import "STPickerDate.h"
+#import "STPickerArea.h"
+
 
 @interface ViewController ()<UITextFieldDelegate, STPickerAreaDelegate, STPickerSingleDelegate, STPickerDateDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textArea;

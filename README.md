@@ -19,9 +19,8 @@
 ![image](https://github.com/STShenZhaoliang/STImage/blob/master/STPickerView/show0.gif)
 ### 2.日期选择器效果图
 ![image](https://github.com/STShenZhaoliang/STImage/blob/master/STPickerView/show2.gif)
-
 ### 3.单数组效果图
-####根据单数据的模式，可以扩展多数据的模式
+#### 根据单数据的模式，可以扩展多数据的模式
 ![image](https://github.com/STShenZhaoliang/STImage/blob/master/STPickerView/show1.gif)
 
 ### 4.中间的显示模式

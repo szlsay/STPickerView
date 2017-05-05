@@ -1,9 +1,9 @@
 //
 //  main.m
-//  STPickerViewTest
+//  STPickerDemo
 //
-//  Created by ST on 16/11/3.
-//  Copyright © 2016年 ST. All rights reserved.
+//  Created by ST on 17/5/5.
+//  Copyright © 2017年 ST. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
