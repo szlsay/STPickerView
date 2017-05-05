@@ -28,7 +28,7 @@
 {
     // 1.设置数据的默认值
     _title             = nil;
-    _font              = [UIFont systemFontOfSize:15];
+    _font              = [UIFont systemFontOfSize:17];
     _titleColor        = [UIColor blackColor];
     _borderButtonColor = [UIColor colorWithRed:205.0/255 green:205.0/255 blue:205.0/255 alpha:1] ;
     _heightPicker      = 240;
@@ -220,13 +220,13 @@
 - (UIButton *)buttonLeft
 {
     if (!_buttonLeft) {
-        CGFloat leftW = STControlSystemHeight;
+        CGFloat leftW = STButtonSystemHeight;
         CGFloat leftH = self.lineView.st_top - STMargin;
         CGFloat leftX = STMarginBig;
         CGFloat leftY = (self.lineView.st_top - leftH) / 2;
         _buttonLeft = [[UIButton alloc]initWithFrame:CGRectMake(leftX, leftY, leftW, leftH)];
         [_buttonLeft setTitle:@"取消" forState:UIControlStateNormal];
-        [_buttonLeft setTitleColor:self.titleColor forState:UIControlStateNormal];
+        [_buttonLeft setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [_buttonLeft addBorderColor:self.borderButtonColor];
         [_buttonLeft.titleLabel setFont:self.font];
         [_buttonLeft addTarget:self action:@selector(selectedCancel) forControlEvents:UIControlEventTouchUpInside];
@@ -244,7 +244,7 @@
         CGFloat rightY = self.buttonLeft.st_y;
         _buttonRight = [[UIButton alloc]initWithFrame:CGRectMake(rightX, rightY, rightW, rightH)];
         [_buttonRight setTitle:@"确定" forState:UIControlStateNormal];
-        [_buttonRight setTitleColor:self.titleColor forState:UIControlStateNormal];
+        [_buttonRight setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_buttonRight addBorderColor:self.borderButtonColor];
         [_buttonRight.titleLabel setFont:self.font];
         [_buttonRight addTarget:self action:@selector(selectedOk) forControlEvents:UIControlEventTouchUpInside];

@@ -27,4 +27,5 @@ UIKIT_EXTERN CGFloat const STControlSystemHeight;
 /** 6.控件的普通高度 36 */
 UIKIT_EXTERN CGFloat const STControlNormalHeight;
 
-
+/** 7.按钮的系统宽度 64*/
+UIKIT_EXTERN CGFloat const STButtonSystemHeight;

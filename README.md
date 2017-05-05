@@ -11,8 +11,8 @@
 
 ## 一、使用
 
-1. 使用POD方式 `pod 'STPickerView', '2.0'`
-2. 使用carthage方式 `github "STShenzhaoliang/STPickerView" "2.0"` 
+1. 使用POD方式 `pod 'STPickerView', '2.1'`
+2. 使用carthage方式 `github "STShenzhaoliang/STPickerView" "2.1"` 
 
 ## 二、效果图展示
 ### 1.城市选择器效果图
@@ -35,6 +35,16 @@
 ![image](https://github.com/STShenZhaoliang/STImage/blob/master/STPickerView/picture2.jpg)
 
 ## 四、使用举例
-大家可以根据自己的实际需求，封装初始化方法。<br>
-注意：如果重新编写setupUI方法，封装的方法，使用`self = [self init]`初始化，否则使用`self = [super init]`
-![image](https://github.com/STShenZhaoliang/STImage/blob/master/STPickerView/u0.jpg)
+
+```
+
+STPickerSingle *pickerSingle = [[STPickerSingle alloc]init];
+[pickerSingle setArrayData:arrayData];
+[pickerSingle setTitle:@"请选择价格"];
+[pickerSingle setTitleUnit:@"人民币"];
+[pickerSingle setContentMode:STPickerContentModeCenter];
+[pickerSingle setDelegate:self];
+[pickerSingle show];
+
+```
+

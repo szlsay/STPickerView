@@ -26,3 +26,6 @@ CGFloat const STControlSystemHeight = 44;
 /** 6.控件的普通高度 36*/
 CGFloat const STControlNormalHeight = 36;
 
+/** 7.按钮的系统宽度 64*/
+CGFloat const STButtonSystemHeight = 64;
+
