@@ -52,9 +52,7 @@
     }else if(component == 1) {
         return 12;
     }else {
-        NSInteger yearSelected = [pickerView selectedRowInComponent:0] + self.yearLeast;
-        NSInteger monthSelected = [pickerView selectedRowInComponent:1] + 1;
-        return  [NSCalendar getDaysWithYear:yearSelected month:monthSelected];
+        return [NSCalendar getDaysWithYear:self.year month:self.month];
     }
 }
 
@@ -66,17 +64,18 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     switch (component) {
-        case 0:
-            [pickerView reloadComponent:1];
+        case 0:{
+            self.year = row + self.yearLeast;
             [pickerView reloadComponent:2];
-            break;
-        case 1:
+        }break;
+        case 1:{
+            self.month = row + 1;
             [pickerView reloadComponent:2];
-        default:
-            break;
+        }break;
+        case 2:{
+            self.day = row + 1;
+        }break;
     }
-    
-    [self reloadData];
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view
@@ -116,13 +115,6 @@
 }
 
 #pragma mark - --- private methods 私有方法 ---
-
-- (void)reloadData
-{
-    self.year  = [self.pickerView selectedRowInComponent:0] + self.yearLeast;
-    self.month = [self.pickerView selectedRowInComponent:1] + 1;
-    self.day   = [self.pickerView selectedRowInComponent:2] + 1;
-}
 
 #pragma mark - --- setters 属性 ---
 
