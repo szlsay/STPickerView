@@ -8,6 +8,15 @@
 
 #import "STPickerDate.h"
 #import "NSCalendar+STPicker.h"
+
+typedef NS_OPTIONS(NSUInteger, STCalendarUnit) {
+    STCalendarUnitYear  = (1UL << 0),
+    STCalendarUnitMonth = (1UL << 1),
+    STCalendarUnitDay   = (1UL << 2),
+    STCalendarUnitHour  = (1UL << 3),
+    STCalendarUnitMinute= (1UL << 4),
+};
+
 @interface STPickerDate()<UIPickerViewDataSource, UIPickerViewDelegate>
 /** 1.年 */
 @property (nonatomic, assign)NSInteger year;
@@ -29,6 +38,7 @@
     _yearLeast = 1900;
     _yearSum   = 200;
     _heightPickerComponent = 28;
+//    self.calendarUnit = STCalendarUnitYear | STCalendarUnitMonth | STCalendarUnitDay;
     
     _year  = [NSCalendar currentYear];
     _month = [NSCalendar currentMonth];
@@ -47,12 +57,16 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    if (component == 0) {
-        return self.yearSum;
-    }else if(component == 1) {
-        return 12;
-    }else {
-        return [NSCalendar getDaysWithYear:self.year month:self.month];
+    switch (component) {
+        case 0:
+            return self.yearSum;
+            break;
+        case 1:
+            return 12;
+            break;
+        default:
+            return [NSCalendar getDaysWithYear:self.year month:self.month];
+            break;
     }
 }
 
@@ -73,7 +87,6 @@
             [pickerView reloadComponent:2];
         }break;
         case 2:{
-            self.day = row + 1;
         }break;
     }
 }
@@ -108,7 +121,8 @@
 - (void)selectedOk
 {
     if ([self.delegate respondsToSelector:@selector(pickerDate:year:month:day:)]) {
-         [self.delegate pickerDate:self year:self.year month:self.month day:self.day];
+        NSInteger day = [self.pickerView selectedRowInComponent:2] + 1;
+         [self.delegate pickerDate:self year:self.year month:self.month day:day];
     }
    
     [super selectedOk];
@@ -120,7 +134,6 @@
 
 - (void)setYearLeast:(NSInteger)yearLeast
 {
-    
     if (yearLeast<=0) {
         return;
     }
@@ -131,6 +144,7 @@
     [self.pickerView selectRow:(_day - 1) inComponent:2 animated:NO];
     [self.pickerView reloadAllComponents];
 }
+
 - (void)setYearSum:(NSInteger)yearSum{
     if (yearSum<=0) {
         return;
@@ -139,6 +153,7 @@
     _yearSum = yearSum;
     [self.pickerView reloadAllComponents];
 }
+
 #pragma mark - --- getters 属性 ---
 
 

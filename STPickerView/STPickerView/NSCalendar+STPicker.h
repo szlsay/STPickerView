@@ -8,15 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_OPTIONS(NSUInteger, STCalendarUnit) {
-    STCalendarUnitYear  = (1UL << 1),
-    STCalendarUnitMonth = (1UL << 2),
-    STCalendarUnitDay   = (1UL << 3),
-    STCalendarUnitHour  = (1UL << 4),
-    STCalendarUnitMinute= (1UL << 5),
-};
-
-
 @interface NSCalendar (STPicker)
 
 /** 1.当前的日期数据元件模型 */

@@ -74,7 +74,6 @@
         [pickerDate setDelegate:self];
         [pickerDate show];
     }
-    
 }
 
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area
