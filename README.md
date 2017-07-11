@@ -11,8 +11,8 @@
 
 ## 一、使用
 
-1. 使用POD方式 `pod 'STPickerView', '2.1'`
-2. 使用carthage方式 `github "STShenzhaoliang/STPickerView" "2.1"` 
+1. 使用POD方式 `pod 'STPickerView', '2.2'`
+2. 使用carthage方式 `github "STShenzhaoliang/STPickerView" "2.2"` 
 
 ## 二、效果图展示
 ### 1.城市选择器效果图
