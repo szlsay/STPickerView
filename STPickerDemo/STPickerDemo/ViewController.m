@@ -41,6 +41,7 @@
         
         STPickerArea *pickerArea = [[STPickerArea alloc]init];
         [pickerArea setDelegate:self];
+        [pickerArea setSaveHistory:YES];
         [pickerArea setContentMode:STPickerContentModeCenter];
         [pickerArea show];
         
