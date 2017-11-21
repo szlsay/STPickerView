@@ -11,6 +11,10 @@
 #define STScreenWidth  CGRectGetWidth([UIScreen mainScreen].bounds)
 #define STScreenHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
+@interface STPickerView()
+@property (nonatomic, assign, getter=isIphonePlus)BOOL iphonePlus;
+@end
+
 @implementation STPickerView
 
 #pragma mark - --- init 视图初始化 ---
@@ -59,6 +63,7 @@
     
     if (self.contentMode == STPickerContentModeBottom) {
     }else {
+        self.lineViewDown.st_bottom = self.contentView.st_height - STControlSystemHeight;
         self.buttonLeft.st_y = self.lineViewDown.st_bottom + STMarginSmall;
         self.buttonRight.st_y = self.lineViewDown.st_bottom + STMarginSmall;
     }
@@ -89,7 +94,11 @@
     
     if (self.contentMode == STPickerContentModeBottom) {
         CGRect frameContent =  self.contentView.frame;
-        frameContent.origin.y -= self.contentView.st_height;
+        if (self.isIphonePlus) {
+            frameContent.origin.y = STScreenHeight - self.contentView.st_height + 16;
+        }else {
+            frameContent.origin.y = STScreenHeight - self.contentView.st_height;
+        }
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self.layer setOpacity:1.0];
             self.contentView.frame = frameContent;
@@ -97,7 +106,11 @@
         }];
     }else {
         CGRect frameContent =  self.contentView.frame;
-        frameContent.origin.y -= (STScreenHeight+self.contentView.st_height)/2;
+        if (self.isIphonePlus) {
+            frameContent.origin.y = (STScreenHeight - self.contentView.st_height + 16)/2;
+        }else {
+            frameContent.origin.y = (STScreenHeight - self.contentView.st_height)/2;
+        }
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self.layer setOpacity:1.0];
             self.contentView.frame = frameContent;
@@ -171,7 +184,9 @@
 {
     _contentMode = contentMode;
     if (contentMode == STPickerContentModeCenter) {
-        self.contentView.st_height += STControlSystemHeight;
+        self.contentView.st_height = self.heightPicker + STControlSystemHeight;
+    }else {
+        self.contentView.st_height = self.heightPicker;
     }
 }
 #pragma mark - --- getters 属性 ---
@@ -283,5 +298,11 @@
     }
     return _lineViewDown;
 }
+
+- (BOOL)isIphonePlus{
+    return (CGRectGetHeight([UIScreen mainScreen].bounds) >= 736) |
+    (CGRectGetWidth([UIScreen mainScreen].bounds) >= 736);
+}
+
 @end
 

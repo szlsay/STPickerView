@@ -11,8 +11,15 @@
 
 ## 一、使用
 
-1. 使用POD方式 `pod 'STPickerView', '2.3'`
-2. 使用carthage方式 `github "STShenzhaoliang/STPickerView" "2.3"` 
+1. 使用Pod方式 `pod 'STPickerView', '2.4'`
+2. 使用Carthage方式 `github 'STShenzhaoliang/STPickerView' '2.4'`
+3. Swift使用Pod方式，Podfile文件添加
+
+```ruby
+use_frameworks!
+```
+
+If you added `SVProgressHUD` manually, just add a [bridging header](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html) file to your project with the `SVProgressHUD` header included.
 
 ## 二、效果图展示
 ### 1.城市选择器效果图
@@ -36,7 +43,7 @@
 
 ## 四、使用举例
 
-```
+```objective-c
 
 STPickerSingle *pickerSingle = [[STPickerSingle alloc]init];
 [pickerSingle setArrayData:arrayData];
@@ -49,6 +56,9 @@ STPickerSingle *pickerSingle = [[STPickerSingle alloc]init];
 ```
 
 ## 五、版本信息
+## 2.4
+1. 修复iphonePlus的显示问题
+
 ### 2.3
 1. 地区选择器添加记录之前地区接口
 
