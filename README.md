@@ -19,8 +19,6 @@
 use_frameworks!
 ```
 
-If you added `SVProgressHUD` manually, just add a [bridging header](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html) file to your project with the `SVProgressHUD` header included.
-
 ## 二、效果图展示
 ### 1.城市选择器效果图
 ![image](https://github.com/STShenZhaoliang/STImage/blob/master/STPickerView/show0.gif)
